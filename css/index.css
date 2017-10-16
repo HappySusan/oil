@@ -1,0 +1,489 @@
+@import url('./common/reset.css');
+::-webkit-input-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: #999999; }
+::-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: #999999;} /* firefox 19+ */
+:-ms-input-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: #999999;} /* ie */
+input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: #999999;}
+
+.swiper-container{
+    position: relative;
+    min-width: 1200px;
+}
+.swiper-slide{
+    width: 1920px;
+    height: 650px;
+    margin:0 auto;
+}
+.swiper-slide img{
+    width:auto;
+    height: 100%;
+    display: block;
+    margin:0 auto;
+}
+.swiper-pagination-bullets{
+    bottom: 60px!important;
+}
+.swiper-pagination-bullet{
+    background: rgba(255, 255, 255, 0.7);
+    width:12px;
+    height: 12px;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background: #F69B02;
+}
+
+
+.header{
+    width:1920px;
+    height: 90px;
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.60) 3%, rgba(0,0,0,0.00) 100%);
+    margin:0 auto;
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left:-960px;
+    z-index: 99;
+}
+.inner_header{
+    width:1200px;
+    margin:0 auto;
+    height: 100%;
+}
+.inner_header .logo{
+    float: left;
+    padding-right: 50px;
+}
+.inner_header .logo img{
+    display: block;
+    height: 50px;
+    width: 328px;
+    position: relative;
+    top:20px;
+}
+.header_menu{
+    float: left;
+    padding-right: 10px;
+}
+.header_menu a{
+    font-family: PingFang-SC-Semibold;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-right: 40px;
+    line-height: 90px;
+    cursor: pointer;
+}
+.inner_header .img_rules{
+    font-family: PingFang-SC-Semibold;
+    font-size: 12px;
+    color: #FFFFFF;
+    float: left;
+    text-indent: 5px;
+    cursor: pointer;
+    line-height: 90px;
+}
+.inner_header .img_rules i{
+    display: block;
+    height: 13px;
+    width:13px;
+    background: url('../img/nav_icon.png') no-repeat center center;
+    float: left;
+    background-size: contain;
+    margin-top:39px;
+}
+.inner_header .login{
+    float: right;
+}
+.inner_header .login dt{
+    float: left;
+    line-height: 90px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.inner_header .login dt a{
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.inner_header .login dd{
+    float: right;
+    height: 30px;
+    width:30px;
+    margin-top:30px;
+    margin-left:10px;
+}
+.inner_header .login dd img{
+    height: 30px;
+    width:30px;
+    display: block;
+}
+.search_container{
+    height: 70px;
+    width:970px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    margin:0 auto;
+    position: absolute;
+    top:400px;
+    left:50%;
+    margin-left:-485px;
+    z-index: 99;
+    overflow: hidden;
+}
+.search_container .search_input{
+    height: 100%;
+    width:787px;
+    float:left;
+}
+.search_container .search_input input{
+    height: 100%;
+    display: block;
+    width:100%;
+    line-height: 70px;
+    background: none;
+    border:none;
+    text-indent: 30px;
+    outline: none;
+}
+.search_container .detail_search{
+    cursor: pointer;
+    float: left;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #3280A9;
+    text-decoration: underline;
+    line-height: 70px;
+}
+.search_container .search_btn{
+    border:none;
+    background: #F49818 url('../img/icon_search_w.png') no-repeat center center;
+    background-size: 40%;
+    width:89px;
+    height: 70px;
+    float: right;
+    outline: none;
+}
+.hot_words{
+    height: 20px;
+    width:910px;
+    margin:0 auto;
+    position: absolute;
+    top:480px;
+    left:50%;
+    margin-left:-455px;
+    z-index: 99;
+    overflow: hidden;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    text-shadow: 0px 0px 4px #000;
+}
+.hot_words .title{
+    float: left;
+    padding-right: 20px;
+}
+.hot_words .words{
+    float: left;
+}
+.hot_words .words li{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+    text-shadow: 0px 0px 4px #000;
+    float: left;
+    padding-right: 20px;
+}
+/* .wrapper .title:hover{
+    color:#F49818;
+} */
+.wrapper{
+    height: 2000px;
+    width:1200px;
+    margin:0 auto;
+    background: skyblue;
+}
+.lastest_act{
+    overflow: hidden;
+}
+.lastest_act .title{
+    font-family: PingFang-SC-Semibold;
+    font-size: 28px;
+    color: #333333;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top:80px;
+    display: block;
+    cursor: pointer;
+}
+.lastest_act li{
+    height: 150px;
+    width: 390px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.lastest_act li.last{
+    margin-right: 0;
+}
+.lastest_act li:last-child{
+    margin-right: 0;
+}
+.lastest_act li img{
+    display: block;
+    width:100%;
+    height: 100%;
+}
+.lastest_act li .l_content{
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.60);
+}
+.lastest_act li .l_content dt{
+    font-family: PingFang-SC-Semibold;
+    font-size: 24px;
+    color: #FFFFFF;
+    width:100%;
+    padding-top:49px;
+}
+.lastest_act li .l_content dd{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #CCCCCC;
+    line-height: 20px;
+    width:100%;
+}
+.rec{
+    margin-top:80px;
+    clear: both;
+    width:100%;
+}
+.rec .title, .types .title{
+    font-family: PingFang-SC-Semibold;
+    font-size: 28px;
+    color: #333333;
+    text-align: center;
+    display: block;
+}
+.rec .rec_desc{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom: 30px;
+}
+.rec_content{
+    height:538px;
+    width:100%;
+}
+.rec .r_c_left{
+    float: left;
+    height: 538px;
+    width:390px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+.rec .r_c_left a img{
+    display: block;
+    height: 478px;
+    width:390px;
+}
+.rec .r_user{
+    height: 60px;
+    width:100%;
+    background: #fff;
+    line-height: 60px; 
+    position: relative;
+}
+.rec .r_user dl{
+    float:left;
+    height: 60px;
+    line-height: 60px; 
+    width:140px;   
+}
+.rec .r_user dl dt{
+    float:left;
+    padding:18px 8px 0 10px;
+}
+.rec .r_user dl dt img{
+    height: 25px;
+    width:25px;
+    display: block;
+}
+.rec .r_user dl dd{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #000000;
+}
+.rec .r_user span{
+    float: right;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #999999;
+    padding-right:15px;
+}
+.rec .photographer{
+    height: 24px;
+    width: 21px;
+    background: url('../img/icon_photographer.png') no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    top:18px;
+    margin-left:5px;
+}
+.rec .r_c_left a+ .hover_show{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 478px;
+    width:390px;
+    background: rgba(0,0,0,0.60);
+    display: none;   
+    z-index: 99; 
+    pointer-events: none;
+}
+.rec .r_c_left a:hover + .hover_show{
+    display: block;
+}
+.hover_show h5{
+    font-family: PingFang-SC-Semibold;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding:30px 0px 0 20px;
+}
+.hover_show ul{
+    padding-left: 20px;
+}
+.hover_show li{float: left; padding-right: 25px;padding-top:10px;}
+.hover_show .fav{
+    display: block;
+    height: 20px;
+    width:20px;
+    background: url('../img/icon_fav_w.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.hover_show .share{
+    display: block;
+    height: 20px;
+    width:20px;
+    background: url('../img/icon_share_w.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.hover_show .watch{
+    display: block;
+    height: 20px;
+    width:20px;
+    background: url('../img/icon_watch_w.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.hover_show .txt{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+    float: left;
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+.rec .r_c_center{
+    float: left;
+    height: 538px;
+    width:524px;
+    overflow: hidden;
+    margin-left:14px;
+}
+.r_c_center .r_c_top{
+    height: 262px;
+    width:100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.r_c_center .r_c_t_left{
+    float: left;
+    width:255px;
+    height: 202px;
+    position: relative;
+}
+.r_c_center .r_c_t_right{
+    float: right;
+    width:255px;
+    height: 202px;
+    position: relative;
+}
+.r_c_center .r_c_t_left a+ .hover_show, .r_c_center .r_c_t_right a+ .hover_show{
+    height: 202px;
+    width:255px;
+}
+.r_c_center .r_c_t_left a img, .r_c_center .r_c_t_right a img{
+    display: block;
+    height: 202px;
+    width:255px;
+}
+.r_c_center .r_c_bottom{
+    height: 261px;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+.rec .r_c_bottom a img{
+    display: block;
+    height: 201px;
+    width:524px;
+}
+.rec .r_c_bottom a+ .hover_show{
+    height: 201px;
+    width:524px;
+}
+/* .r_c_center
+.r_c_center */
+
+.rec .r_c_right{
+    float: right;
+    height: 538px;
+    width:258px;
+    overflow: hidden;
+    position: relative;
+}
+.rec .r_c_right a img{
+    display: block;
+    height: 478px;
+    width:258px;
+}
+.rec .r_c_right a+ .hover_show{
+    height: 478px;
+    width:258px;
+}
+.rec a+ .hover_show{
+    position: absolute;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.60);
+    display: none;   
+    z-index: 99; 
+    pointer-events: none;
+}
+
+
+.rec a:hover + .hover_show{
+    display: block;
+}
+
+.types{
+    margin-top:80px;
+    clear: both;
+    width: 100%;
+}
