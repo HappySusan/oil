@@ -663,13 +663,13 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
 }
 
 .lastest_pics{
-    height: 367px;
     width: 1200px;
     margin-top: 80px;
     overflow: hidden;
 }
 .lastest_pics .lp_pics{
     margin-top: 30px;
+    height: 367px;
 }
 .lastest_pics .lp_pics li .lp_pic dd{
     height: 151px;
