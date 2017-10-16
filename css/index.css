@@ -487,3 +487,94 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     clear: both;
     width: 100%;
 }
+.types .type{
+    width: 860px;
+    margin:0 auto;
+    margin-top:30px;
+    clear: both;
+}
+.types .type li{
+    float: left;
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #333333;
+    margin-right:100px;
+    cursor: pointer;
+    position: relative;
+}
+.types .type li:last-child{
+    margin-right: 0;
+}
+.types .type li:hover{
+    color:#F49818;
+}
+.types .type dl{
+    padding-bottom: 25px;
+}
+.types .type dl:after{
+    position: absolute;
+    bottom:0;
+    left:50%;
+    margin-left: -10px;
+    content:"";
+    height: 0px;
+    width:0px;
+    border: solid 10px transparent;
+    border-bottom: solid 10px #fff;
+    display: none;
+}
+.types .type li dt{
+    height: 60px;
+    width:60px;
+    border-radius: 50%;
+}
+.types .type li dt img{
+    display: block;
+    height: 100%;
+    width:100%;
+}
+.types .type li dt img +label{
+    height: 60px;
+    width:60px;
+    background: pink;
+    position: absolute;
+    left:0;
+    top:0;
+    border-radius: 50%;
+    display: none;
+}
+.types .type li:hover dt img +label{
+    display: block;
+}
+.types .type li dd{
+    text-align: center;
+    padding-top: 5px;
+}
+.types .type .type_clicked {
+    color:#F49818;
+}
+.types .type .type_clicked dt img +label{
+    display: block;
+}
+.types .type .type_clicked dl:after{
+    display: block;
+}
+.type_detail{
+    width: 1140px;
+    height: 70px;
+    background: #fff;
+    clear: both;
+    padding-left: 60px;
+}
+.type_detail a{
+    padding-right: 50px;
+    float: left;
+    cursor: pointer;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    line-height: 70px;
+}
+.type_detail a:hover{
+    color:#F49818;
+}
