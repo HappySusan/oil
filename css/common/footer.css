@@ -1,0 +1,17 @@
+@import url('../common/reset.css');
+.footer{
+    width: 100%;
+    max-width: 1920px;
+    margin:0 auto;
+    background: #fff;
+    height: 110px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    line-height: 26px;
+    text-align: center;
+    padding-top:30px;
+}
+.footer b{
+    font-weight: bold;
+}
