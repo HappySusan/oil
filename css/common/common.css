@@ -1,0 +1,30 @@
+.none {
+    display: none;
+}
+
+.clear {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.loadMore {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.loadMore img {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
