@@ -200,9 +200,10 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     color:#F49818;
 } */
 .wrapper{
-    height: 2000px;
+    height: auto;
     width:1200px;
     margin:0 auto;
+    padding-bottom: 80px;
     background: skyblue;
 }
 .lastest_act{
@@ -266,12 +267,13 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     clear: both;
     width:100%;
 }
-.rec .title, .types .title{
+.wrapper .title{
     font-family: PingFang-SC-Semibold;
     font-size: 28px;
     color: #333333;
     text-align: center;
     display: block;
+    font-weight: bold;
 }
 .rec .rec_desc{
     font-family: PingFangSC-Regular;
@@ -332,7 +334,7 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     color: #999999;
     padding-right:15px;
 }
-.rec .photographer{
+.photographer_icon{
     height: 24px;
     width: 21px;
     background: url('../img/icon_photographer.png') no-repeat center;
@@ -486,6 +488,7 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     margin-top:80px;
     clear: both;
     width: 100%;
+    padding-bottom: 80px;
 }
 .types .type{
     width: 860px;
@@ -501,6 +504,7 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     margin-right:100px;
     cursor: pointer;
     position: relative;
+    font-weight: normal;
 }
 .types .type li:last-child{
     margin-right: 0;
@@ -577,4 +581,309 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
 }
 .type_detail a:hover{
     color:#F49818;
+}
+
+
+.hot_works .works{
+    height: 341px;
+    width: 1200px;
+    margin-top: 30px;
+}
+.hot_works .works li, .lastest_pics .lp_pics li{
+    height: 100%;
+    float: left;
+    margin-right: 14px;
+}
+.hot_works .works li:hover, .lastest_pics .lp_pics li:hover{
+    cursor: pointer;
+}
+.hot_works .works li:last-child, .lastest_pics .lp_pics li:last-child{
+    margin:0;
+}
+.hot_works .works .work_img img, .lastest_pics .lp_pics .lp_pic_img img{
+    display: block;
+    height: 216px;
+    width: 289px;
+    margin:0 auto;
+}
+.hot_works .works li .hw_work dd{
+    height: 125px;
+    width: 274px;
+    background: #fff;
+    padding-left: 15px;
+}
+.hw_work_user, .lp_pic_user{
+    height: 60px;
+    overflow: hidden;
+    width:100%;
+    background: #fff;
+    line-height: 60px; 
+    border-bottom: solid 1px #F1F1F1;
+    position: relative;
+}
+.hw_work_user dl, .lp_pic_user dl{
+    float:left;
+    height: 60px;
+    line-height: 60px; 
+    width:140px;   
+}
+.hw_work_user dl dt, .lp_pic_user dl dt{
+    float:left;
+    padding:16px 8px 0 0px;
+}
+.hw_work_user dl dt img, .lp_pic_user dl dt img{
+    height: 30px;
+    width:30px;
+    display: block;
+}
+.hw_work_user dl dd, .lp_pic_user dl dd{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #000000;
+}
+.hw_work_user span, .lp_pic_user span{
+    float: right;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #999999;
+    padding-right:15px;
+}
+.hw_work_user_say{
+    height: 64px;
+    width:100%;
+    clear: both;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #2A2A2A;
+    line-height: 22px;
+    padding-top: 10px;
+}
+.hw_work_user_say span{
+    color: #3280A9;
+    padding-right:10px;
+}
+
+.lastest_pics{
+    height: 367px;
+    width: 1200px;
+    margin-top: 80px;
+    overflow: hidden;
+}
+.lastest_pics .lp_pics{
+    margin-top: 30px;
+}
+.lastest_pics .lp_pics li .lp_pic dd{
+    height: 151px;
+    width: 289px;
+    background: #fff;
+}
+.lp_pic_name{
+    border-bottom: solid 1px #F1F1F1;
+    height: 90px;
+}
+.lp_pic_name h5{
+    font-family: PingFang-SC-Semibold;
+    font-size: 18px;
+    color: #333333;
+    padding:20px 0px 0 15px;
+}
+.lp_pic_name ul{
+    padding-left: 15px;
+}
+.lp_pic_name li{
+    float: left; padding-right: 16px;padding-top:10px;
+}
+.lp_pic_name .fav_grey{
+    display: block;
+    height: 20px;
+    width:20px;
+    background: url('../img/icon_fav_grey.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.lp_pic_name .share_grey{
+    display: block;
+    height: 20px;
+    width:20px;
+    background: url('../img/icon_share_grey.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.lp_pic_name .watch_grey{
+    display: block;
+    height: 20px;
+    width:20px;
+    background: url('../img/icon_watch_grey.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.lp_pic_name .txt{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #999999;
+    float: left;
+    line-height: 20px;
+    padding-left: 10px;
+}
+.lp_pic_user{
+    border:none;
+    padding-left: 15px;
+    width: 274px;
+}
+
+.rankings{
+    margin: 80px auto;
+    height: 483px;
+    width: 1200px;
+    clear: both;
+    overflow: hidden;
+}
+.rankings .rank_user{
+    float: left;
+    width: 420px;
+    height: 483px;
+}
+.rankings .rank_cor{
+    width: 730px;
+    height: 483px;
+    float: right;
+    background: #fff;
+    padding:0 30px;
+}
+.rankings .rank_head{
+    font-family: PingFang-SC-Semibold;
+    font-size: 18px;
+    color: #333333;
+    border-bottom: solid 4px #F49818;
+    height: 40px;
+    line-height: 20px;
+    font-weight: bold;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+.rankings .rank_head li{
+    float: left;
+}
+.rank_content1{
+    width:230px;
+    text-align: center;
+    margin: 0 10px;
+}
+.rank_content2{
+    width: 100px;
+    text-align: right;
+}
+.rank_txt{
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 120px;
+}
+.rank_img{
+    padding-left: 30px;
+}
+.rank_content1 span{
+    float: left;
+    margin:0 auto;
+    line-height: 70px;
+}
+.rank_content1 .photographer_icon{
+    top:24px;
+}
+.rank_content1 span img{
+    display: block;
+    height: 40px!important;
+    width:40px!important;
+    margin-right: 10px;
+}
+.rank_head1{
+    margin-left:10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.rank_head2{
+    width: 250px;
+    text-align: center;
+    margin: 0 15px;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.rank_head3{
+    width: 150px;
+    margin-right: 15px;
+    text-align: right;
+}
+.rank_head4{
+    width: 150px;
+    margin-right: 15px;
+    text-align: right;
+}
+.rank_content{
+    clear:both;
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #333333;
+}
+.rank_user .rank_content li{
+    border:none;
+}
+.rank_content li{
+    height: 63px;
+    clear:both;
+    overflow: hidden;
+    border-bottom: solid 1px #F1F1F1;
+}
+.rank_content li p{
+    overflow: hidden;
+    height: 63px;
+    line-height: 63px;
+    float: left;
+    position: relative;
+}
+.rank_content li p img{
+    display: block;
+    width: 37px;
+    height: 40px;
+    margin-top:15px;
+}
+.rankings .rank_title{
+    font-family: PingFang-SC-Semibold;
+    font-size: 24px;
+    color: #333333;
+    padding-top:40px;
+    padding-bottom: 25px;
+    font-weight: bold;
+}
+.rank_red{
+    color:#CE0000;
+}
+.rank_grey{
+    color: #666666;
+}
+
+
+.relative_pics .r_pics{
+    margin-top: 30px;
+    height: 66px;
+}
+.relative_pics .r_pics li{
+    float: left;
+    margin-right: 20px;
+}
+.relative_pics .r_pics li:last-child{
+    margin:0;
+}
+.relative_pics .r_pics li a{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    display: block;
+    background: #E6E6E6;
+    height: 66px;
+    width: 224px;
+    text-align: center;
+    line-height: 66px;
+    cursor: pointer;
 }
