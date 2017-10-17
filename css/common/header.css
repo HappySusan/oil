@@ -40,13 +40,14 @@
     padding-left: 40px;
     font-size: 18px;
     color: #333333;
+    font-weight: 600;
 }
 
 .common_header .nav p a:hover {
     color: #F49818;
 }
 
-.common_header .nav p a.img_rules {
+.common_header .nav a.img_rules {
     font-size: 12px;
     color: #333333;
     padding-left: 50px;
