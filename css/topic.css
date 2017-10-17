@@ -2,14 +2,15 @@
 @import url('./../css/common/header.css');
 @import url('./../css/common/footer.css');
 .topic_list{
-    width: 1200px;
-    margin: 40px auto 20px auto;
+    width: 1240px;
+    margin: 40px auto 0 auto;
 }
 .every_topic{
     float: left;
     width: 593px;
     height: 225px;
     background: #ffffff;
+    margin: 0 10px 20px 10px;
 }
 .topic_detail_wrapper,.topic_pic{
     float: left;
@@ -25,6 +26,7 @@
 }
 .topic_detail_wrapper{
     width:293px;
+    position: relative;
 }
 .topic_detail_wrapper h3{
     padding:30px 20px 0 20px;
@@ -55,4 +57,15 @@
     font-size: 14px;
     color: #666666;
     line-height: 22px;
+}
+.view_details{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.view_details a{
+    color: #F49818;
+    
 }
