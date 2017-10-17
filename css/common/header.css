@@ -34,10 +34,12 @@
 .common_header .nav p {
     float: left;
     font-family: PingFangSC-Regular;
+    padding-left:50px;
+    padding-right: 10px;
 }
 
 .common_header .nav p a {
-    padding-left: 40px;
+    padding-right: 40px;
     font-size: 18px;
     color: #333333;
     font-weight: 600;
@@ -50,9 +52,17 @@
 .common_header .nav a.img_rules {
     font-size: 12px;
     color: #333333;
-    padding-left: 50px;
-    background: url('../../img/nav_icon.png') no-repeat 35px center;
-    background-size: 13px;
+    cursor: pointer;
+}
+.common_header .nav a.img_rules i{
+    display: block;
+    height: 13px;
+    width:13px;
+    background: url('../../img/nav_icon.png') no-repeat center center;
+    float: left;
+    background-size: contain;
+    margin-top:40px;
+    margin-right: 5px;
 }
 
 .common_header .nav p a.img_rules i {
