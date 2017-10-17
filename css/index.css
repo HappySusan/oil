@@ -1,4 +1,6 @@
-@import url('./common/reset.css');
+@import url('./../css/common/common.css');
+@import url('./../css/common/footer.css');
+
 ::-webkit-input-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: #999999; }
 ::-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: #999999;} /* firefox 19+ */
 :-ms-input-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: #999999;} /* ie */
