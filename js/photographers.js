@@ -1,7 +1,6 @@
 var photographersObj = {
     init: function() {
         this.loadMore();
-        console.log($(".loadMore"))
     },
     loadMore: function() {
         var winH = $(window).height(); //页面可视区域高度 
