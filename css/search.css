@@ -1,0 +1,81 @@
+@import url('./../css/common/common.css');
+@import url('./../css/common/header.css');
+@import url('./../css/common/footer.css');
+.search_list{
+    width: 1200px;
+    margin: 40px auto 30px auto;
+}
+.search_list h3{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #666666;
+}
+.search_list h3 span{
+    padding: 0 8px;
+}
+.search_result{
+    padding-top: 30px;
+}
+.search_result li{
+    width: 289px;
+    position: relative;
+}
+.search_result li a,.every_img {
+    width: 100%;
+}
+.every_img img{
+    display: block;
+    width: 100%;
+}
+.hover_show{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.60);
+    z-index: 99;
+}
+.hover_show h5{
+    font-family: PingFang-SC-Semibold;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 30px 0px 12px 20px;
+}
+.hover_show p{
+    padding-left: 20px;
+}
+.hover_show span{float: left; font-size: 12px;
+    color: #FFFFFF;}
+.hover_show .fav{
+    display: block;
+    height: 16px;
+    width:16px;
+    background: url('./../img/icon_fav_w.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.hover_show .share{
+    display: block;
+    height: 16px;
+    width:16px;
+    background: url('./../img/icon_share_w.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.hover_show .watch{
+    display: block;
+    height: 16px;
+    width:16px;
+    background: url('./../img/icon_watch_w.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.hover_show .txt{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+    float: left;
+    line-height: 20px;
+    padding:0 31px 0 10px;
+}
