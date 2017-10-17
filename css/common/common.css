@@ -1,4 +1,5 @@
 @import url('./../common/reset.css');
+a{outline: none;}
 .none {
     display: none;
 }
