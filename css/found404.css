@@ -1,0 +1,22 @@
+@import url('./../css/common/reset.css');
+.wrapper img{
+    display: block;
+    height: 270px;
+    width: 619px;
+    margin:0 auto;
+    margin-top:183px;
+}
+.wrapper dl dd{
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #666666;
+    padding-top: 26px;
+}
+.wrapper dl dd a{
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #F69B02;
+    line-height: 25px; 
+    text-decoration: underline;
+}
