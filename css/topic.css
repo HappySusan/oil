@@ -1,0 +1,58 @@
+@import url('./../css/common/common.css');
+@import url('./../css/common/header.css');
+@import url('./../css/common/footer.css');
+.topic_list{
+    width: 1200px;
+    margin: 40px auto 20px auto;
+}
+.every_topic{
+    float: left;
+    width: 593px;
+    height: 225px;
+    background: #ffffff;
+}
+.topic_detail_wrapper,.topic_pic{
+    float: left;
+    height: 225px;
+}
+.topic_pic{
+    width:300px;
+}
+.topic_pic img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.topic_detail_wrapper{
+    width:293px;
+}
+.topic_detail_wrapper h3{
+    padding:30px 20px 0 20px;
+    font-family: PingFang-SC-Semibold;
+    font-size: 24px;
+    color: #333333;
+    width: 253px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.topic_detail_wrapper .title{
+    padding:5px 20px 0 45px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #999999;
+    background: url("./../img/icon_Company.png") no-repeat 20px 4px; 
+    background-size: 20px 20px;  
+    line-height: 20px;
+    width: 293px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.topic_detail_wrapper .topic_detail{
+    padding:5px 20px 0 20px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    line-height: 22px;
+}
