@@ -86,7 +86,9 @@
     padding-right: 15px;
     margin-right: 15px;
 }
-
+.character_introduction ul li.works{
+    border-right: solid 1px #999999; 
+}
 .character_introduction ul li span {
     padding-left: 3px;
 }
