@@ -2,23 +2,28 @@
 @import url('./../css/common/header.css');
 @import url('./../css/common/footer.css');
 .search_list{
-    width: 1200px;
+    width: 1214px;
     margin: 40px auto 30px auto;
 }
 .search_list h3{
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #666666;
+    padding-left: 7px;
+    padding-bottom: 30px;
 }
 .search_list h3 span{
     padding: 0 8px;
 }
 .search_result{
-    padding-top: 30px;
+    position: relative;
+    height: auto;
 }
 .search_result li{
     width: 289px;
     position: relative;
+    float: left;
+    margin: 0 7px 14px 7px;
 }
 .search_result li a,.every_img {
     width: 100%;
@@ -35,12 +40,20 @@
     left: 0;
     background: rgba(0,0,0,0.60);
     z-index: 99;
+    display: none;
+}
+.search_result li:hover .hover_show{
+    display: block;
 }
 .hover_show h5{
     font-family: PingFang-SC-Semibold;
     font-size: 18px;
     color: #FFFFFF;
-    padding: 30px 0px 12px 20px;
+    padding: 30px 20px 12px 20px;
+    width: 249px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 .hover_show p{
     padding-left: 20px;
