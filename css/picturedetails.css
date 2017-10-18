@@ -1,0 +1,227 @@
+@import url('./../css/common/common.css');
+@import url('./../css/common/header.css');
+@import url('./../css/common/footer.css');
+.picturedetails_list{
+    width: 1200px;
+    margin :40px auto 0 auto;
+    height: 600px;
+}
+.right_main{
+    width: 780px;
+    height: 600px;
+    background: #fff;
+
+}
+.picBox{
+    width: 760px;
+    height: 523px;
+    margin: 10px;
+}
+.picBox img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.bottom_infor{
+    /* height: 67px;
+    line-height: 67px; */
+}
+.bottom_infor p{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #333333;
+    padding-left: 20px;
+    width: 513px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    float: left;
+    line-height: 67px;
+}
+.operation{
+    width: 227px;
+}
+operation:after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.share_btn,.dislike{
+    width: 113px;
+    margin-top: 24px;
+    cursor: pointer;
+}
+.dislike{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    background: url("./../img/icon_like_n.png") no-repeat 20px center;
+    background-size: 20px 20px;
+    text-align: center;
+    border-right: solid 1px #CCCCCC;
+    padding-left: 20px;
+}
+.like{
+    background: url("./../img/icon_like_y.png") no-repeat 20px center;
+    background-size: 20px 20px;
+}
+.share_btn{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    background: url("./../img/icon_share_black.png") no-repeat 25px center;
+    background-size: 20px 20px;
+    text-align: center;
+    padding-left: 20px;
+}
+.picture_infor{
+    width: 390px;
+    height: 350px;
+    background: #fff;
+
+}
+.picture_infor h3{
+    font-family: PingFang-SC-Semibold;
+    font-size: 24px;
+    color: #333333;
+    padding: 30px 30px 0 30px;
+    width: 330px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    line-height: 33px;
+    height: 33px;
+}
+.picture_infor ul{
+    padding: 0 30px;
+}
+.picture_infor ul li{
+    height: 25px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    line-height: 25px;
+}
+.picture_infor ol{
+    margin: 20px 30px;
+    height: 30px;
+}
+.picture_infor ol li{
+    width: 109px;
+    float: left;
+    border-right: solid 1px #CCCCCC;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #999999;
+    float: left;
+    padding-left: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.picture_infor ol li i{
+    display: block;
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+.picture_infor ol li.fav{
+    background: url(../img/icon_fav_grey.png) no-repeat 25px center;
+    background-size: 20px 20px;
+}
+.picture_infor ol li.share{
+    background: url(../img/icon_share_grey.png) no-repeat 25px center;
+    background-size: 20px 20px;
+}
+.picture_infor ol li.download{
+    background: url(../img/icon_download_gray.png) no-repeat 25px center;
+    border-right: none;
+    background-size: 20px 20px;
+}
+
+.download_group{
+    height: 40px;
+    margin:30px 30px 0 30px;
+}
+.download_group div{
+    width: 155px;
+    height: 40px;
+    border-radius: 4px;
+    line-height: 40px;
+    font-family: PingFangSC-Regular;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.download_sample{
+    background: #F49818;
+    color: #FFFFFF;
+}
+.download_artwork{
+    border: 1px solid #F49818;
+    color: #F49818;
+}
+.copyright_tips{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #999999;
+    margin: 15px 0 0 30px;
+
+}
+.friends_push{
+    width: 390px;
+    height: 230px;
+    background: #fff;
+    margin-top: 20px;
+}
+.friend_top{
+    margin: 30px;
+}
+.friend_pic{
+    width: 60px;
+    height: 60px;
+}
+.friend_pic a,.friend_pic a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.friend_name{
+    line-height: 60px;
+    padding-left: 20px;
+    font-family: PingFang-SC-Semibold;
+    font-size: 18px;
+    color: #333333;
+}
+.join_follow{
+    border: 1px solid #F49818;
+    border-radius: 4px;
+    width: 96px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #F49818;
+}
+.introduce_p{
+    margin: 10px 30px 0 30px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    line-height: 25px;
+}
+.send_email{
+    width: 100%;
+    background: #F49818 url("./../img/icon_send_email.png") no-repeat 40px center;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+
+}
