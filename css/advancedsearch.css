@@ -27,13 +27,17 @@
     padding: 10px 0 10px 20px;
     font-weight: bold;
 }
-.advancedsearch_list ul li div{
+.advancedsearch_list ul li .every_option{
     float: left;
-    margin-left: 20px;
-    line-height: 34px;
-    padding: 9px 0 9px 20px;
-    width: 1068px;
     background: #fff;
+    width: 1068px; margin-left: 20px;
+}
+.advancedsearch_list ul li .every_option div{
+   
+    line-height: 34px;
+    padding: 9px 0 9px 0;
+    width: 1048px;
+    margin-left: 20px;
     border-bottom: 1px dashed #E6E6E6;
 }
 .advancedsearch_list ul li:after{
@@ -64,7 +68,7 @@
 }
 .advancedsearch_list ul li.last_li div{
     border-bottom: none;
-    padding: 9px 0 10px 20px;
+    padding: 9px 0 10px 0;
     
 }
 .screen_wrapper{
