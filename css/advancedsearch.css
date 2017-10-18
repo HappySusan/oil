@@ -1,0 +1,100 @@
+@import url('./../css/common/common.css');
+@import url('./../css/common/header.css');
+@import url('./../css/common/footer.css');
+.advancedsearch_list{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #fff;
+}
+.advancedsearch_list ul{
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #E6E6E6;
+}
+.advancedsearch_list ul li{
+    background: #f1f1f1;    
+    height: auto;
+}
+.advancedsearch_list ul li p{
+    float: left;
+    font-family: PingFang-SC-Semibold;
+    font-size: 16px;
+    color: #333333;
+    width: 90px;
+    height: 100%;
+    line-height: 34px;
+    padding: 10px 0 10px 20px;
+    font-weight: bold;
+}
+.advancedsearch_list ul li div{
+    float: left;
+    margin-left: 20px;
+    line-height: 34px;
+    padding: 9px 0 9px 20px;
+    width: 1068px;
+    background: #fff;
+    border-bottom: 1px dashed #E6E6E6;
+}
+.advancedsearch_list ul li:after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.advancedsearch_list ul li div span.all{
+    font-weight:bold;
+    padding-left: 0;
+}
+.advancedsearch_list ul li div span{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    padding: 0 15px;
+    cursor: pointer;
+}
+.advancedsearch_list ul li div span:hover{
+    color: #F49818;
+}
+.advancedsearch_list ul li div span.active{
+    color: #F49818;
+    
+}
+.advancedsearch_list ul li.last_li div{
+    border-bottom: none;
+    padding: 9px 0 10px 20px;
+    
+}
+.screen_wrapper{
+    width: 100%;
+    max-width: 1920px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    border-bottom:2px solid #E6E6E6;
+    padding: 20px 0 40px 0;
+}
+.screen_wrapper p{
+    width: 1200px;
+    margin: 0 auto;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+}
+.screen_wrapper p span{
+    color: #333333;
+    
+}
+.screen_wrapper p span em{
+    display: none;
+}
+.screen_wrapper p span em i{
+    font-style: normal;
+    color: #F49818;
+}
+.screen_wrapper p span em{
+    font-style: normal;    
+    color: #333333;
+}
