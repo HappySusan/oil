@@ -7,7 +7,7 @@ var advancedsearchObj = {
             $(this).addClass("active").siblings("span").removeClass("active");
             var activeVal= $(this).html(),
             ind=$(this).parents("li").index();
-            console.log($("<i>"+activeVal+"</i>；"))
+            // console.log($("span.active").html());
             $("#screen_wrapper span em").eq(ind).show().children("i").html(activeVal);
         });
     }   
