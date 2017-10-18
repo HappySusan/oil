@@ -68,3 +68,34 @@
     padding: 9px 0 10px 20px;
     
 }
+.screen_wrapper{
+    width: 100%;
+    max-width: 1920px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    border-bottom:2px solid #E6E6E6;
+    padding: 20px 0 40px 0;
+}
+.screen_wrapper p{
+    width: 1200px;
+    margin: 0 auto;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+}
+.screen_wrapper p span{
+    color: #333333;
+    
+}
+.screen_wrapper p span em{
+    display: none;
+}
+.screen_wrapper p span em i{
+    font-style: normal;
+    color: #F49818;
+}
+.screen_wrapper p span em{
+    font-style: normal;    
+    color: #333333;
+}
