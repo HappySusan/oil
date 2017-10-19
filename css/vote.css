@@ -13,7 +13,7 @@
     min-width: 1200px;
     padding-top: 40px;
     background: #fff;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
 }
 .vote_type_main{
     width: 1200px;
@@ -25,12 +25,17 @@
     color: #999999;
     border-bottom: solid 3px #fff;
     margin: 0 10px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     cursor: pointer;
+}
+
+.vote_type_main span:hover{
+    color: #F49818;
+    
 }
 .vote_type_main span.cur{
     color: #F49818;
-    border-bottom: solid 3px #F49818;
+    border-bottom: solid 4px #F49818;
 }
 .vote_list{
     width: 1214px;
@@ -61,7 +66,7 @@
 }
 .company{
     padding-left: 25px;
-    background: url("./../img/icon_Company.png") no-repeat 0 2px; 
+    background: url("./../img/icon_Company.png") no-repeat 0 1px; 
     background-size: 20px 20px;  
     line-height: 22px;
     width: 370px;
@@ -69,6 +74,7 @@
     overflow:hidden;
     color: #999999;
     text-overflow:ellipsis;
+    font-size: 14px;
 }
 .time_effective{
     font-family: PingFangSC-Regular;

@@ -158,26 +158,27 @@
 }
 .personal_type{
     text-align: center;
-    height: 35px;
+    height: 50px;
     margin-top: 50px;
-    line-height: 41px;
+    line-height: 50px;
     overflow: hidden;
 }
 .personal_type li{
     display: inline;
     margin: 0 30px;
-    border-bottom: solid 2px #fff;
+    border-bottom: solid 4px #fff;
     font-family: PingFangSC-Regular;
     font-size: 18px;
     color: #999999;
     cursor: pointer;
+    padding-bottom: 10px;
 }
 .personal_type li:hover{
     color: #F49818;
     
 }
 .personal_type li.active{
-    border-bottom: solid 2px #F49818;
+    border-bottom: solid 4px #F49818;
     color: #F49818;
     font-weight: bolder;
 }
