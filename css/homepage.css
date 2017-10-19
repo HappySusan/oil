@@ -1,0 +1,225 @@
+@import url('./../css/common/common.css');
+@import url('./../css/common/header.css');
+@import url('./../css/common/footer.css');
+.homepage_top_bg{
+    max-width: 1920px;
+    min-width: 1200px;
+    background: url("./../img/banner2.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+}
+.homepage_top{
+    width: 1200px;
+    height: 400px;
+    position: relative;
+}
+.homepage{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1200px;
+    height: 100px;
+}
+.every_number div{
+    float: left;
+    width: 1px;
+    height: 28px;
+    background: #CCCCCC;
+    margin-top: 42px;
+}
+.every_number dl{
+    float: left;
+    padding: 30px 60px 0 60px;
+    text-align: center;
+}
+.every_number dl dt{
+    font-family: PingFang-SC-Semibold;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.every_number dl dd{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding-top: 5px;
+}
+.btn_group{
+    margin-top: 40px;
+}
+.btn_group div{
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    font-family: PingFangSC-Regular;
+    width: 130px;
+    font-size: 14px;
+}
+
+.edit_data{
+    background: #F49818;
+    margin-right: 60px;
+    color: #FFFFFF;
+}
+.change_bg{
+    border: 1px solid #F49818;
+    color: #F49818;
+}
+.edit_data a{
+    color: #FFFFFF;
+}
+.change_bg a{
+    font-size: 14px;
+    color: #F49818;
+}
+.personal_infor{
+    width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+}
+.personal_pic{
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid 1px #fff;
+    position: relative;
+    top: -60px;
+}
+.personal_pic img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.personal_name{
+    text-align: center;
+    font-family: PingFang-SC-Semibold;
+    font-size: 24px;
+    color: #333333;
+    margin-top: -30px;
+}
+.introduce{
+    text-align: center;
+}
+.introduce div{
+    display: inline;
+}
+.personal_company{
+    padding-right: 10px;
+}
+.personal_company i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("./../img/icon_Company.png") no-repeat;
+    background-size: 20px 20px;
+    position: relative;
+    top: 5px;
+}
+.brief_introduction span,.personal_company span{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    line-height: 20px;
+}
+.brief_introduction i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("./../img/icon_introduction.png") no-repeat;
+    background-size: 20px 20px;
+    position: relative;
+    top: 5px;
+}
+.personal_type{
+    text-align: center;
+    height: 35px;
+    margin-top: 50px;
+    line-height: 41px;
+    overflow: hidden;
+}
+.personal_type li{
+    display: inline;
+    margin: 0 30px;
+    border-bottom: solid 2px #fff;
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #999999;
+    cursor: pointer;
+}
+.personal_type li.active{
+    border-bottom: solid 2px #F49818;
+    color: #F49818;
+    font-weight: bolder;
+}
+.Photographer_profile{
+    background: rgba(244,152,24,0.05);
+    border: 1px solid #F49818;
+    width: 820px;
+    margin: 30px auto;
+}
+.Photographer_profile ul{
+    padding: 20px;
+}
+.Photographer_profile ul li{
+    font-family: PingFangSC-Regular;
+    line-height: 28px;
+}
+.Photographer_profile ul li p{
+    font-size: 16px;
+    color: #2A2A2A;
+    float: left;
+    width: 80px;
+}
+.Photographer_profile ul li span{
+    display: block;
+    float: left;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #666666;
+    line-height: 28px;
+    width: 698px;
+}
+.Photographer_profile ul li:after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+
+
+
+
+.common_tags{
+    width: 1200px;
+    margin: 60px auto;
+    overflow: hidden;
+    height: 28px;
+    line-height: 28px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+}
+.common_tags p{
+    padding-right: 23px;
+    float: left;
+    
+}
+.common_tags a{
+    border: 1px solid #999999;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+    float: left;
+    margin-right: 15px;
+    line-height: 26px;
+}
