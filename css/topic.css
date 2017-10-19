@@ -41,6 +41,7 @@
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
+    font-weight: bold;
 }
 .topic_detail_wrapper .title{
     padding:5px 20px 0 45px;
@@ -56,7 +57,7 @@
     text-overflow:ellipsis;
 }
 .topic_detail_wrapper .topic_describe{
-    padding:5px 20px 0 20px;
+    padding:10px 20px 0 20px;
     font-family: PingFangSC-Regular;
     font-size: 14px;
     color: #666666;
