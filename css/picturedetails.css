@@ -437,7 +437,7 @@ operation:after{
 }
 .comment_list{
     width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 60px auto;
 }
 .every_comment{
     border-bottom: solid 1px  #CCCCCC;
