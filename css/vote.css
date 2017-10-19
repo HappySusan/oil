@@ -1,10 +1,16 @@
 @import url('./../css/common/common.css');
 @import url('./../css/common/header.css');
 @import url('./../css/common/footer.css');
+.vote_container{
+    width: 1200px;
+    overflow: hidden;
+    margin: 30px auto;
+}
 .vote_type{
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
+    min-width: 1200px;
     padding-top: 40px;
     background: #fff;
     padding-bottom: 10px;
@@ -28,14 +34,14 @@
 }
 .vote_list{
     width: 1214px;
-    margin: 30px auto;
+    margin: 0 auto;
 }
 .every_vote{
     width:593px;
     background: #ffffff;
     height: 475px;
     padding-bottom: 20px;
-    margin: 0 7px 14px 7px;
+    margin: 0 14px 14px 0;
 }
 .every_vote h3{
     padding: 30px 20px 0 20px;

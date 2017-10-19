@@ -179,10 +179,13 @@ operation:after{
 }
 .friend_top{
     margin: 30px;
+    height: 60px;
 }
 .friend_pic{
     width: 60px;
     height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .friend_pic a,.friend_pic a img{
     display: block;
