@@ -302,6 +302,7 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     width:390px;
 }
 .rec .r_user{
+    display: block;
     height: 60px;
     width:100%;
     background: #fff;
@@ -368,7 +369,7 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
 .hover_show ul{
     padding-left: 20px;
 }
-.hover_show li{float: left; padding-right: 25px;padding-top:10px;}
+.hover_show li{float: left; padding-right: 20px;padding-top:10px;}
 .hover_show .fav{
     display: block;
     height: 20px;
@@ -595,8 +596,25 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     float: left;
     margin-right: 14px;
 }
-.hot_works .works li:hover, .lastest_pics .lp_pics li:hover{
+/* .hot_works .works li:hover, .lastest_pics .lp_pics li:hover{
     cursor: pointer;
+} */
+.hot_works .works .work_img{
+    position: relative;
+}
+.hot_works .works .work_img a+ .hover_show{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 216px;
+    width: 289px;
+    background: rgba(0,0,0,0.60);
+    display: none;   
+    z-index: 99; 
+    pointer-events: none;
+}
+.hot_works .works .work_img a:hover + .hover_show{
+    display: block;
 }
 .hot_works .works li:last-child, .lastest_pics .lp_pics li:last-child{
     margin:0;
@@ -614,6 +632,7 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     padding-left: 15px;
 }
 .hw_work_user, .lp_pic_user{
+    display: block;
     height: 60px;
     overflow: hidden;
     width:100%;
@@ -825,6 +844,9 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     clear:both;
     font-family: PingFangSC-Regular;
     font-size: 18px;
+    color: #333333;
+}
+.rank_content a{
     color: #333333;
 }
 .rank_user .rank_content li{
