@@ -21,9 +21,10 @@ var searchObj = {
         var boxs=$(clsName);
         // 计算总列数=页面宽/每一列的宽
         var w=boxs.eq(0).outerWidth(true);   // 每一列的宽
-        var pagew=document.documentElement.clientWidth || document.body.clientWidth;
+        var pagew=oParent.outerWidth(true);
         var cols=Math.floor(pagew/w);
         var len=boxs.length;
+        console.log(pagew)
         // 计算wrapper的宽且让wrapper这个div在页面中居中显示
         oParent.css({
             'width':+w*cols+'px',

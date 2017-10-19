@@ -1,20 +1,25 @@
 @import url('./../css/common/common.css');
 @import url('./../css/common/header.css');
 @import url('./../css/common/footer.css');
+.search_container{
+    width: 1200px;
+    overflow: hidden;
+    margin: 40px auto 30px auto;
+}
 .search_list{
     width: 1214px;
-    margin: 40px auto 30px auto;
+   
 }
 .search_list h3{
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #666666;
-    padding-left: 7px;
     padding-bottom: 30px;
 }
 .search_list h3 span{
     padding: 0 8px;
 }
+
 .search_result{
     position: relative;
     height: auto;
@@ -23,7 +28,7 @@
     width: 289px;
     position: relative;
     float: left;
-    margin: 0 7px 14px 7px;
+    margin: 0 14px 14px 0;
 }
 .search_result li a,.every_img {
     width: 100%;
