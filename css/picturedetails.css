@@ -275,7 +275,7 @@ operation:after{
     margin-right: 15px;
     line-height: 26px;
 }
-.people_like_picture{
+.title_list{
     width: 1200px;
     margin: 0 auto;
     font-family: PingFang-SC-Semibold;
@@ -285,17 +285,18 @@ operation:after{
 }
 .like_picture_list{
     width: 1200px;
-    margin: 20px auto 0 auto; 
+    margin: 20px auto 60px auto; 
     overflow: hidden;
     position: relative; 
+    height: 90px;
 }
 .like_picture_list ul{
     height: 90px;
     width: 4000px;
+    position: absolute;left: 0;
 }
 .like_picture_list ul li{
     width: 84px;
-    height: 84px;
     float: left;
     margin-right: 20px;
 }
@@ -329,11 +330,108 @@ operation:after{
     position: absolute;
     right: 0;
     top: 0;
+    cursor: pointer;
 }
 .next img{
     display: block;
     width: 12px;
     height: 51px;
     margin:20px  auto;  
+    
+}
+.similar_pictures{
+    width: 1200px;
+    margin: 20px auto 60px auto;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.similar_pictures ul{
+    width:4000px;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+.similar_pictures ul li{
+    width: 182px;
+    height: 120px;
+    margin-right: 10px;
+    float: left;
+}
+.similar_pictures ul li a,.similar_pictures ul li a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.next_picture{
+    background: rgba(0,0,0,0.6);
+    width: 34px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.next_picture img{
+    display: block;
+    width: 12px;
+    height: 51px;
+    margin: 35px auto;
     cursor: pointer;
+}
+.comment{
+    width: 1200px;
+    margin: 20px auto 0 auto;
+    border-bottom: solid 1px  #CCCCCC;
+    height: 200px;
+}
+.comment .tare{
+    background: #FFFFFF;
+    border-radius: 4px;
+    height: 120px;
+    resize:none;
+    width: 100%;
+    border: none;
+    outline: none;
+    line-height: 20px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #999999;
+}
+.publish_comment{
+    background: #CCCCCC;
+    border-radius: 2px;
+    width: 90px;
+    height: 38px;
+    float: right;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 38px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #999999;
+    cursor: pointer;
+}
+.login .publish_comment{
+    background: #F49818;
+    color: #FFFFFF;
+}
+.login p{
+    display: none;
+}
+.comment p{
+    text-align: center;
+    line-height: 120px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    margin-top: -120px;
+    color: #999999;
+}
+.comment p a{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #3280A9;
+    line-height: 20px;
 }
