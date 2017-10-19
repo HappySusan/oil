@@ -4,16 +4,16 @@
 .vote_container{
     width: 1200px;
     overflow: hidden;
-    margin: 30px auto;
+    margin: 40px auto;
 }
 .vote_type{
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     min-width: 1200px;
-    padding-top: 40px;
     background: #fff;
     padding-bottom: 16px;
+    padding-top: 9px;
 }
 .vote_type_main{
     width: 1200px;
@@ -57,6 +57,7 @@
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
+    font-weight: bold;
 
 }
 .title{
@@ -87,7 +88,8 @@
     font-family: PingFangSC-Regular;
     font-size: 14px;
     color: #666666;
-    line-height: 22px;    
+    line-height: 22px;  
+    height: 44px;  
 }
 .vote_pic_btn{
     padding: 20px;
