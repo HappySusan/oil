@@ -62,7 +62,7 @@
 }
 .title{
     height: 22px;
-    margin: 10px 20px;
+    margin: 6px 20px 11px 20px;
     width: 553px;
 }
 .company{
@@ -84,7 +84,7 @@
     line-height: 22px;
 }
 .vote_describe{
-    margin: 10px 20px 0 20px;
+    margin: 0px 20px 0 20px;
     font-family: PingFangSC-Regular;
     font-size: 14px;
     color: #666666;
@@ -116,7 +116,7 @@
     text-align: center;
     border: 1px solid #F49818;
     border-radius: 4px;
-    margin:115px 0 0 43px;
+    margin:140px 0 0 43px;
 }
 .join_vote .vote_btn a{
     display: block;
@@ -131,7 +131,7 @@
     text-align: center;
     border: 1px solid #999999;
     border-radius: 4px;
-    margin:115px 0 0 43px;
+    margin:140px 0 0 43px;
 }
 .join_result .vote_btn a{
     display: block;
