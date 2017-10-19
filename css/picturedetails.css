@@ -16,15 +16,23 @@
     width: 760px;
     height: 523px;
     margin: 10px;
+    position: relative;
 }
 .picBox img{
     display: block;
     width: 100%;
     height: 100%;
 }
-.bottom_infor{
-    /* height: 67px;
-    line-height: 67px; */
+.picBox p{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.8;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.50);
+    cursor: pointer;
 }
 .bottom_infor p{
     font-family: PingFangSC-Regular;
@@ -178,8 +186,10 @@ operation:after{
     margin-top: 20px;
 }
 .friend_top{
-    margin: 30px;
+    margin: 30px 30px 10px 30px;
     height: 60px;
+    float: left;
+    width: 330px;
 }
 .friend_pic{
     width: 60px;
@@ -197,6 +207,12 @@ operation:after{
     padding-left: 20px;
     font-family: PingFang-SC-Semibold;
     font-size: 18px;
+    width: 166px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.friend_name a{
     color: #333333;
 }
 .join_follow{
@@ -209,22 +225,115 @@ operation:after{
     font-family: PingFangSC-Regular;
     font-size: 14px;
     color: #F49818;
+    text-align: center;
+    margin-top: 10px;
 }
 .introduce_p{
-    margin: 10px 30px 0 30px;
+    margin: 10px 30px 30px 30px;
     font-family: PingFangSC-Regular;
     font-size: 14px;
     color: #666666;
     line-height: 25px;
 }
+
 .send_email{
     width: 100%;
-    background: #F49818 url("./../img/icon_send_email.png") no-repeat 40px center;
+    background: #F49818 url("./../img/icon_send_email.png") no-repeat 146px center;
+    background-size: 25px 18px;
     height: 50px;
     line-height: 50px;
     text-align: center;
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #FFFFFF;
-
+    padding-left: 30px;
+    cursor: pointer;
+}
+.picture_keyword{
+    width: 1200px;
+    margin: 60px auto;
+    overflow: hidden;
+    height: 28px;
+    line-height: 28px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+}
+.picture_keyword p{
+    padding-right: 23px;
+    float: left;
+    
+}
+.picture_keyword a{
+    border: 1px solid #999999;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+    float: left;
+    margin-right: 15px;
+    line-height: 26px;
+}
+.people_like_picture{
+    width: 1200px;
+    margin: 0 auto;
+    font-family: PingFang-SC-Semibold;
+    font-size: 24px;
+    color: #333333;
+    font-weight: 500;
+}
+.like_picture_list{
+    width: 1200px;
+    margin: 20px auto 0 auto; 
+    overflow: hidden;
+    position: relative; 
+}
+.like_picture_list ul{
+    height: 90px;
+    width: 4000px;
+}
+.like_picture_list ul li{
+    width: 84px;
+    height: 84px;
+    float: left;
+    margin-right: 20px;
+}
+.like_picture_list ul li a,.like_picture_list ul li dt img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.like_picture_list ul li dt{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.like_picture_list ul li dd{
+    width: 84px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    padding-top: 10px;
+    line-height: 20px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.next{
+    background: rgba(0,0,0,0.6);
+    width: 34px;
+    height: 90px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.next img{
+    display: block;
+    width: 12px;
+    height: 51px;
+    margin:20px  auto;  
+    cursor: pointer;
 }
