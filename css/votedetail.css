@@ -1,0 +1,92 @@
+@import url('./../css/common/common.css');
+@import url('./../css/common/header.css');
+@import url('./../css/common/footer.css');
+.votedetail_herder{
+    max-width: 1920px;
+    min-width: 1200px;
+    background: #fff;
+    margin: 0 auto;
+    width: 100%;
+    border-top: solid 2px #F49818;
+    padding-bottom: 40px;
+}
+.votedetail_herder h3{
+    font-family: PingFang-SC-Semibold;
+    font-size: 28px;
+    color: #333333;
+    font-weight: bold;
+    padding-top: 40px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.votedetail_number{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    overflow: hidden;
+}
+.votedetail_number ul{
+    width: 1245px;height: 111px;
+}
+.votedetail_number ul li{
+    width: 390px;
+    height: 111px;
+    text-align: center;
+    line-height: 111px;
+    border-radius: 4px;
+    float: left;
+    margin-right: 15px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.votedetail_number ul li span{
+    font-size: 24px;
+    position: relative;
+    top: 4px;
+    padding-left: 5px;
+}
+.access_times{
+    background: #D76AA3;
+}
+.participant{
+    background: #65B2C3;
+}
+.total_vote{
+    background: #7972BD;
+}
+.votedetail_rule{
+    width: 1200px;
+    margin: 30px auto 0 auto;
+}
+.votedetail_rule li{
+    padding-bottom: 5px;
+}
+.votedetail_rule li div{
+    float: left;
+    font-family: PingFang-SC-Semibold;
+    font-size: 16px;
+    color: #333333;
+    line-height: 28px;
+    font-weight: bold;
+}
+.votedetail_rule li p{
+    float: left;
+    width: 1120px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #666666;
+    line-height: 28px;
+}
+.votedetail_rule li p span{
+    display: block;
+}
+.votedetail_rule li:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}

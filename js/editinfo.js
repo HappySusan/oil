@@ -1,6 +1,6 @@
-var topicObj = {
+var editinfoObj = {
     init: function() {
-        
+
     }
 }
-topicObj.init();
+editinfoObj.init();
