@@ -26,6 +26,13 @@ var homepageObj = {
     personal_type_fun:function(){
         $("#personal_type").on("click","li",function(){
             $(this).addClass("active").siblings("li").removeClass("active");
+            if ($(this).attr("data_id")==0||$(this).attr("data_id")==1||$(this).attr("data_id")==2) {
+                $("#follow_fans_list").addClass("none");
+                $("#search_list").removeClass("none");
+            }else if($(this).attr("data_id")==3||$(this).attr("data_id")==4){
+                $("#search_list").addClass("none");
+                $("#follow_fans_list").removeClass("none");
+            }   
         });
     },
     water_fall_fun:function(parent,clsName){
