@@ -349,14 +349,15 @@ operation:after{
     
 }
 .similar_pictures ul li{
-    width: 182px;
+    width: auto;
     height: 120px;
     margin-right: 10px;
     float: left;
 }
-.similar_pictures ul li a,.similar_pictures ul li a img{
+.similar_pictures ul li a,
+.similar_pictures ul li a img{
     display: block;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
 }
 .next_picture{

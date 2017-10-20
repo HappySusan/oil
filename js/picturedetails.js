@@ -1,8 +1,8 @@
 var advancedsearchObj = {
     init: function() {
         this.likeFun();
-        this.nextFun();
-        // this.nextFun($("#next_picture"),$("#similar_pictures"));
+        this.nextPeopleFun();
+        this.nextPicturesFun();
     },
     likeFun: function() {
         $("#dislike").on("click",function(){
@@ -13,30 +13,43 @@ var advancedsearchObj = {
             }
         });
     },
-    nextFun:function(){
-        //$("#next_people"),$("#people_list")
-        var omveDistance=$("#people_list").find("li").outerWidth(true),
-            len=$("#people_list").find("li").length;
-            $("#people_list").css("width",omveDistance*len+"px");
+    nextPeopleFun:function(){
+        var wid=0;
+            $.each($("#people_list").find("li"),function(){
+                wid+=$(this).outerWidth(true);
+            });
+            $("#people_list").css("width",wid+"px");
             $("#next_people").on("click",function(){
                 $("#next_people").off("click");
-                advancedsearchObj.moveFun($("#next_people"),$("#people_list"),omveDistance)
+                var omveDistance=$("#people_list").find("li:first").outerWidth(true);
+                advancedsearchObj.moveFun($("#next_people"),$("#people_list"),omveDistance,1);
+                
             });
-
-            var omveDistance2=$("#similar_pictures").find("li").outerWidth(true),
-            len2=$("#similar_pictures").find("li").length;
-            $("#similar_pictures").css("width",omveDistance2*len2+"px");
+    },
+    nextPicturesFun:function(){
+        var wid2=0;
+            $.each($("#similar_pictures").find("li"),function(){
+                wid2+=$(this).outerWidth(true);
+            });
+            $("#similar_pictures").css("width",wid2+"px");
             $("#next_picture").on("click",function(){
                 $("#next_picture").off("click");
-                advancedsearchObj.moveFun($("#next_picture"),$("#similar_pictures"),omveDistance2)
+                var omveDistance2=$("#similar_pictures").find("li:first").outerWidth(true);
+                advancedsearchObj.moveFun($("#next_picture"),$("#similar_pictures"),omveDistance2,2)
+               
             })
-
     },
-    moveFun:function(ele,object,omveDistance){
+    moveFun:function(ele,object,omveDistance,Distinguish){
         object.animate({"left":-omveDistance+"px"},500,function(){
             object.append(object.find("li:first"));
             object.css({"left":0});
-            advancedsearchObj.nextFun(ele,object);
+            if (Distinguish==1) {
+                advancedsearchObj.nextPeopleFun();
+            }else if (Distinguish==2) {
+                advancedsearchObj.nextPicturesFun();
+            }
+            
+            
         });
     }
 }
