@@ -3,6 +3,7 @@ var advancedsearchObj = {
         this.likeFun();
         this.nextPeopleFun();
         this.nextPicturesFun();
+        this.sendEmail();
     },
     likeFun: function() {
         $("#dislike").on("click",function(){
@@ -49,6 +50,12 @@ var advancedsearchObj = {
                 advancedsearchObj.nextPicturesFun();
             }
         });
+    },
+    sendEmail:function(){
+        $(".send_email").on("click",function(){
+            common.sendEmailDialog($("#friend_name a").html())
+        });
+
     }
 
 }
