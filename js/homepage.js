@@ -3,6 +3,7 @@ var homepageObj = {
         this.loadMore();
         this.water_fall_fun("#search_result",".lis");
         this.personal_type_fun();
+        this.sendEmail();
     },
     loadMore: function() {
         var winH = $(window).height(); //页面可视区域高度 
@@ -15,6 +16,12 @@ var homepageObj = {
                 //去加载更多
             }
          })
+    },
+    sendEmail:function(){
+        $(".send_email").on("click",function(){
+            var names=$(".personal_name").html();
+            common.sendEmailDialog(names)
+        });
     },
     personal_type_fun:function(){
         $("#personal_type").on("click","li",function(){

@@ -4,6 +4,7 @@ var advancedsearchObj = {
         this.nextPeopleFun();
         this.nextPicturesFun();
         this.sendEmail();
+        // common.sendEmailDialog($(".send_email"),$("#friend_name a").html())
     },
     likeFun: function() {
         $("#dislike").on("click",function(){
@@ -55,7 +56,6 @@ var advancedsearchObj = {
         $(".send_email").on("click",function(){
             common.sendEmailDialog($("#friend_name a").html())
         });
-
     }
 
 }
