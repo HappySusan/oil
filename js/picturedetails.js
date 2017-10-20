@@ -48,9 +48,8 @@ var advancedsearchObj = {
             }else if (Distinguish==2) {
                 advancedsearchObj.nextPicturesFun();
             }
-            
-            
         });
     }
+
 }
 advancedsearchObj.init();
