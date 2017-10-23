@@ -54,7 +54,7 @@ var votedetailObj = {
                         alert("最多选择10个标签");
                         return false;
                     }else{
-                        common.ajaxFun("url","GET",{"val":new_tag_val},function(res){//走一个接口，然后返回ID，放进新创建的标签里面data_id这里
+                        common.ajaxFn("url","GET",{"val":new_tag_val},function(res){//走一个接口，然后返回ID，放进新创建的标签里面data_id这里
                             //返回数据格式{
                             //     status:200,
                             //     id:1

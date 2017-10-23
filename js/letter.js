@@ -1,14 +1,14 @@
 var fansObj = {
     init: function() {
-        this.typeStatesFun();
-        this.loadMore();
+        this.typeStatesFn();
+        this.loadMoreFn();
     },
-    typeStatesFun:function(){
+    typeStatesFn:function(){
         $("#type_states").on("click","li",function(){
-            $(this).addClass("current").siblings("li").removeClass("current")
+            $(this).addClass("current").siblings("li").removeClass("current");
         })
     },
-    loadMore: function() {
+    loadMoreFn: function() {
         var winH = $(window).height(); //页面可视区域高度 
         $(window).scroll(function() {
             var pageH = $(document.body).height();  
