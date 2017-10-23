@@ -25,7 +25,7 @@ var homepageObj = {
     },
     personal_type_fun:function(){
         $("#personal_type").on("click","li",function(){
-            $(this).addClass("active").siblings("li").removeClass("active");
+            $(this).addClass("current").siblings("li").removeClass("current");
             if ($(this).attr("data_id")==0||$(this).attr("data_id")==1||$(this).attr("data_id")==2) {
                 $("#follow_fans_list").addClass("none");
                 $("#search_list").removeClass("none");

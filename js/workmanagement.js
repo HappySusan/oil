@@ -1,11 +1,11 @@
 var fansObj = {
     init: function() {
-        this.fansFun();
+        this.typeStatesFun();
         this.loadMore();
     },
-    fansFun:function(){
-        $("#fans_or_follow").on("click","span",function(){
-            $(this).addClass("current").siblings("span").removeClass("current")
+    typeStatesFun:function(){
+        $("#type_states").on("click","li",function(){
+            $(this).addClass("current").siblings("li").removeClass("current")
         })
     },
     loadMore: function() {
