@@ -1,15 +1,17 @@
 var votedetailObj = {
     init: function() {
-        this.changeTagsFun()
+        this.originalTagFn();
+        this.delCheckedTagFn();
+        this.pressBlankFn()
     },
-    changeTagsFun:function(){
+    originalTagFn:function(){
         $("#more_tags").on("click","li",function(){
             var vals=$(this).html(),
-            data_id=$(this).attr("data_id"),
-            str="",
-            flag=0,
-            len=$("#selected_tag li").length;
-            str="<li data_id="+data_id+">"+vals+"<span>×</span></li>";
+                data_id=$(this).attr("data_id"),
+                str="",
+                flag=0,
+                len=$("#selected_tag li").length;
+                str="<li data_id="+data_id+">"+vals+"<span>×</span></li>";
             if (len!=0) {
                 if (len>=10) {
                     alert("最多选择10个标签");
@@ -25,21 +27,25 @@ var votedetailObj = {
                     }
                 });
                 if (flag) {
-                    $("#selected_tag").prepend($(str));
+                    $("#selected_tag").append($(str));
                 }
             }else if(len==0){
-                $("#selected_tag").prepend($(str));
+                $("#selected_tag").append($(str));
             }
         });
+    },
+    delCheckedTagFn: function(){
         $("#selected_tag").on("click","span",function(){
             var ele=$(this).parents("li");
             ele.remove();
         });
+    },
+    pressBlankFn:function(){
         $("#custom_tag").keypress(function(event){
             if(event.which == 32) {
                 var str="",
                     len=$("#selected_tag li").length,
-                    new_tag_val=$("#custom_tag").val("");
+                    new_tag_val=$("#custom_tag").val();
                     
                 if (new_tag_val=="") {
                     alert("请输入正确标签内容！")
@@ -48,14 +54,14 @@ var votedetailObj = {
                         alert("最多选择10个标签");
                         return false;
                     }else{
-                        common.ajaxFun("url","GET",{"val":new_tag_val},function(res){//走一个接口，然后返回ID，放进新创建的标签里面data_id这里
+                        common.ajaxFn("url","GET",{"val":new_tag_val},function(res){//走一个接口，然后返回ID，放进新创建的标签里面data_id这里
                             //返回数据格式{
-                            //     status:1,
+                            //     status:200,
                             //     id:1
                             // }
-                            if (res.status==1) {
+                            if (res.status==200) {
                                 str="<li data_id="+res.id+">"+new_tag_val+"<span>×</span></li>";
-                                $("#selected_tag").prepend($(str));
+                                $("#selected_tag").append($(str));
                                 $("#custom_tag").val("")
                             }
                         }); 

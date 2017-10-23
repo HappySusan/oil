@@ -1,9 +1,9 @@
 var topicObj = {
     init: function() {
-        this.loadMore();
-        this.vote_type_fun();
+        this.loadMoreFn();
+        this.voteTabsFn();
     },
-    loadMore: function() {
+    loadMoreFn: function() {
         var winH = $(window).height(); //页面可视区域高度 
         $(window).scroll(function() {
             var pageH = $(document.body).height();  
@@ -15,7 +15,7 @@ var topicObj = {
             }
          })
     },
-    vote_type_fun:function(){
+    voteTabsFn:function(){
         $("#vote_type_main").on("click","span",function(){
             $(this).addClass("cur").siblings("span").removeClass("cur");
         })
