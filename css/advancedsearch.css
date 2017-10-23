@@ -62,7 +62,7 @@
 .advancedsearch_list ul li div span:hover{
     color: #F49818;
 }
-.advancedsearch_list ul li div span.active{
+.advancedsearch_list ul li div span.current{
     color: #F49818;
     
 }

@@ -27,11 +27,11 @@
     color: #999999;
     
 }
-.center_set_type ul li.active{
+.center_set_type ul li.current{
     border-bottom: solid 4px  #F49818;
     font-weight: bold;
 }
-.center_set_type ul li.active a{
+.center_set_type ul li.current a{
     color: #F49818;
 }
 .center_set_type ul li:hover a{
@@ -55,7 +55,7 @@
     margin-right: 30px;
     cursor: pointer;
 }
-.fans_or_follow p span.on{
+.fans_or_follow p span.current{
     color: #F49818;
 }
 .follow_fans_list_container{

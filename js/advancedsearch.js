@@ -4,7 +4,7 @@ var advancedsearchObj = {
     },
     optionMore: function() {
         $(".lis").on("click","span",function(){
-            $(this).addClass("active").siblings("span").removeClass("active");
+            $(this).addClass("current").siblings("span").removeClass("current");
             var activeVal= $(this).html(),
             ind=$(this).parents("li").index();
             // console.log($("span.active").html());
