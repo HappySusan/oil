@@ -70,14 +70,9 @@
     display: block;
     float: left;
     width: 995px;
-    height: 38px;
-    line-height: 38px;
-    background: #F2F2F2;
-    border: 1px solid #E6E6E6;
-    border-radius: 4px;
-    padding:0 15px;
     font-family: PingFangSC-Regular;
     font-size: 14px;
+    height: 38px;
     color: #333333;
     margin-left: 30px;
 }

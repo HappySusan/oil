@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中国石油图片综合资源服务平台-上传资料</title>
+    <link rel="stylesheet" href="./../css/upload.css">
+</head>
+<!-- 头部导航 -->
+<div class="common_header_wrapper">
+    <div class="common_header">
+        <div class="nav">
+            <div class="logo">
+                <a href="./../index.html"><img src="./../img/nav_logo_b.png" alt="中国石油图片综合资源服务平台logo"></a>
+            </div>
+            <p>
+                <a href="./../index.html">首页</a>
+                <a href="./photographers.html">摄影家</a>
+                <a href="./topic.html">专题</a>
+                <a href="./vote.html">投票</a>
+            </p>
+            <a class="img_rules"><i></i>图片管理制度</a>        
+        </div>
+        <div class="search_center">
+            <div class="go_search"><a href="./search.html"><img src="./../img/icon_search_grey.png" alt="搜索"></a></div>                        
+            <div class="my_center">
+                <dl class="Nlogin" style="display:none;">
+                    <dt>欢迎，请<a>登录</a></dt>
+                    <dd><img src="./../img/user.png" alt=""></dd>
+    
+                </dl>
+                <div class="Ylogin" id="Ylogin">
+                    <a href="#">
+                        <dl>
+                            <dt>石油集团123</dt>
+                            <dd><img src="./../img/user.png" alt=""><span>6</span></dd>
+                        </dl>
+                    </a>
+                    <div class="clear"></div>
+                    <ul class="none">
+                        <li class="uploading_works"><a href="./upload.html">上传作品</a></li>
+                        <li class="works_management"><a href="./workmanagement.html">作品管理</a></li>
+                        <li class="follow"><a href="./fans.html">关注／粉丝</a></li>
+                        <li class="mail"><a href="./letter.html">站内信</a></li>
+                        <li class="set"><a href="./editinfo.html">编辑资料</a></li>
+                        <li class="exit_login"><a href="">退出登陆</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 头部导航 end-->
+<div class="upload_rule">
+    <h3>作品一般上传规则：</h3>
+    <ul>
+        <li>1、图片上传大小一般控制在12MB以内。</li>
+        <li>2、图片格式限JPEG、PNG、BMP、GIF、Webp。</li>
+        <li>3、如果在上传途中，网站提示“选择的图片未符合要求的宽度,高度和文件大小”，这样就说明您上传的图片没有符合图像分辨率或大小要求。</li>
+        <li>4、图片质量要求：对焦清晰、曝光标准、构图合理、主题突出。</li>
+    </ul>
+    <div class="uploading_works">
+        <h2>上传作品</h2>
+        <div class="iterm works_img">
+            <h4>选择图片</h4>
+            <div class="fl"><img src="./../img/banner3.png" alt=""></div>
+            <label for="change_works" class="change_works">选择作品</label>
+            <input type="file" id="change_works">    
+        </div> 
+        <div class="iterm title">
+            <h4>标题</h4>
+            <input type="text" class="input" placeholder="请输入标题"> 
+        </div>
+        <div class="iterm adress">
+            <h4>地点</h4>
+            <input type="text" class="input" placeholder="请输入地点"> 
+        </div>
+        <div class="iterm img_desc">
+            <h4>图片描述</h4>
+            <input type="text" class="input" placeholder="请输入图片描述"> 
+        </div>
+        <div class="iterm tag">
+            <h4>标签</h4>
+            <div class="tag_bg fl">
+                <ul>
+                    <li>欢迎十九大<span>×</span></li>
+                    <li>石油<span>×</span></li>
+                </ul>
+                <input type="text" class="custom_tag" placeholder="自定义标签，输完后按空格结束"> 
+            </div>  
+        </div>
+        <ul class="more_tags">
+            <li>欢迎十九大</li>
+            <li>2017年</li>
+            <li>石油</li>
+            <li>扭扭捏捏</li>
+            <li>1234123</li>
+        </ul>
+        <div class="iterm vote_activity">
+            <h4>投票活动</h4>
+            <select name="" id="">
+                <option value="1">不参加，谢谢</option>
+                <option value="0">参加</option>
+            </select>
+        </div>
+        <div class="iterm authorization">
+            <h4>是否授权</h4>
+            <div class="prompt"><img src="./../img/tooltip.png" alt=""></div>
+            <input type="radio" name="authorization" checked="checked" id="Yauthorization">
+            <label for="Yauthorization"><span><i></i></span>是</label> 
+            <input type="radio" name="authorization" id="Nauthorization"> 
+            <label for="Nauthorization"><span><i></i></span>否</label>  
+        </div>
+        <div class="submit_works">提交</div>
+    </div>
+</div>
+<div class="footer">
+    <p>©2017 中国石油天然气集团公司 版权所有</p>
+    <p><b>技术支持：</b>中国石油信息技术服务中心</p>
+</div>
+<script src="./../js/common/jquery.min.js"></script>
+<script src="./../js/upload.js"></script>
+
+<body>
+
+</body>
+
+</html>

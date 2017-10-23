@@ -110,3 +110,11 @@ a{outline: none;}
     background: #F49818;
     cursor: pointer;
 }
+.input{
+    line-height: 38px;
+    background: #F2F2F2;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    padding:0 15px;
+    font-size: 14px;
+}
