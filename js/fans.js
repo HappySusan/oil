@@ -1,9 +1,9 @@
 var fansObj = {
     init: function() {
-        this.fansFun();
+        this.fansFn();
         this.loadMore();
     },
-    fansFun:function(){
+    fansFn:function(){
         $("#fans_or_follow").on("click","span",function(){
             $(this).addClass("current").siblings("span").removeClass("current")
         })
