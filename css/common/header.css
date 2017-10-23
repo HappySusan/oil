@@ -84,7 +84,7 @@
 .my_center {
     float: right;
     position: relative;
-    width: 172px;
+    width: 192px;
 }
 
 .my_center .Ylogin,
@@ -92,7 +92,10 @@
     float: right;
     cursor: pointer;
 }
-
+.my_center .Ylogin dl{
+    height: 90px;
+    overflow: hidden;
+}
 .my_center .Ylogin:hover ul {
     display: block;
 }
@@ -117,6 +120,10 @@
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #333;
+    width: 112px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
 .my_center .Nlogin dt a {
@@ -131,7 +138,7 @@
     height: 30px;
     width: 30px;
     margin-top: 30px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .my_center .Ylogin dd {
