@@ -21,6 +21,8 @@
 
 .common_header .nav {
     float: left;
+    height: 90px;
+    overflow: hidden;
 }
 
 .common_header .nav .logo {
