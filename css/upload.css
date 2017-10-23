@@ -18,14 +18,14 @@
     color: #2A2A2A;
     line-height: 24px;
 }
-.uploading_works{
+.uploading_works_centers{
     width: 1200px;
     margin: 30px auto 60px auto;
     background: #fff;
     padding-bottom: 80px;
 
 }
-.uploading_works h2{
+.uploading_works_centers h2{
     font-family: PingFang-SC-Semibold;
     font-size: 18px;
     color: #333333;
