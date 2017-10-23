@@ -84,7 +84,8 @@
 .my_center {
     float: right;
     position: relative;
-    width: 192px;
+    background: red;
+    width: 194px;
 }
 
 .my_center .Ylogin,
@@ -138,7 +139,7 @@
     height: 30px;
     width: 30px;
     margin-top: 30px;
-    /* margin-left: 10px; */
+    margin-left: 10px;
 }
 
 .my_center .Ylogin dd {
