@@ -1,0 +1,215 @@
+@import url('./../css/common/common.css');
+@import url('./../css/common/header.css');
+@import url('./../css/common/footer.css');
+.center_set_type{
+    max-width: 1920px;
+    min-width: 1200px;
+    background: #fff;
+    margin: 0 auto;
+    width: 100%;
+    height: 91px;
+    border-top: solid 2px #F49818;
+}
+.center_set_type ul{
+    width: 1200px;
+    margin: 0 auto;
+    height: 91px;
+}
+.center_set_type ul li{
+    float: left;
+    margin: 48px 60px 0 0;
+    padding-bottom: 17px;
+    border-bottom: solid 4px  #ffffff;
+}
+.center_set_type ul li a{
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #999999;
+    
+}
+.center_set_type ul li.current{
+    border-bottom: solid 4px  #F49818;
+    font-weight: bold;
+}
+.center_set_type ul li.current a{
+    color: #F49818;
+}
+.center_set_type ul li:hover a{
+    color: #F49818;
+}
+.type_states{
+    width: 1200px;
+    margin: 40px auto 30px auto;
+}
+.type_states ul{
+    height: 20px;
+}
+.type_states li{
+    line-height: 20px;
+    float: left;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #999999;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.type_states li:hover{
+    color: #F49818;    
+}
+.type_states li.current{
+    color: #F49818;
+}
+.news{
+    width: 1200px;
+    margin: 0 auto;
+
+}
+.news li{
+    margin-bottom: 15px;
+    background: #fff;
+}
+.news_infor:after,.news li:after,.reply:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}
+.news_infor{
+    /* height: 60px; */
+}
+.like_pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 30px 0 0px 30px;
+}
+.like_pic img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.like_inofr{
+    margin-left: 20px;
+    width: 614px;
+    margin-top: 30px ;
+}
+.like_name{
+    padding-top: 9px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    line-height: 20px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.like_name span{
+    font-family: PingFang-SC-Semibold;
+    font-size: 14px;
+    color: #151515;
+    padding-left: 10px;
+}
+.like_name span a{
+    font-family: PingFang-SC-Semibold;
+    font-size: 14px;
+    color: #151515;
+    line-height: 20px;
+    font-weight: bold;
+}
+.like_name i{
+    font-style: normal;
+    color: #3280A9;
+    font-weight: bold;
+    
+}
+.time{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #999999;
+    padding-top: 5px;
+}
+.works_pic{
+    width: 106px;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.works_pic img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.agree_refuse{
+    margin:40px 30px 40px 60px;
+
+}
+.agree_refuse div{
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #F49818;
+    border-radius: 4px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.agree_refuse div.refuse{
+    margin-left: 20px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    color: #999999;
+    background: none;
+}
+.agree_refuse div.agreeY{
+    background: #CCCCCC;
+    border-radius: 4px;
+    color: #999999;
+}
+.chat{
+    margin: 15px 30px 30px 110px;
+}
+.chat p{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #333333;
+}
+.reply{
+    margin-top: 20px;
+}
+.reply input{
+    background: #F2F2F2;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    display: block;
+    width: 920px;
+    height: 38px;
+    line-height: 38px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #333333;
+    float: left;
+    padding-left: 20px;
+}
+.reply_btn{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: #F49818;
+    border-radius: 4px;
+    float: right;
+}
+.y_reply_btn{
+    background: #CCCCCC;
+    color: #999999;
+}
