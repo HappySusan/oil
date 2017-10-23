@@ -1,9 +1,9 @@
 var searchObj = {
     init: function() {
-        this.loadMore();
-        this.water_fall_fun("#search_result",".lis");
+        this.loadMoreFn();
+        this.waterFallFn("#search_result",".lis");
     },
-    loadMore: function() {
+    loadMoreFn: function() {
         var winH = $(window).height(); //页面可视区域高度 
         $(window).scroll(function() {
             var pageH = $(document.body).height();  
@@ -15,7 +15,7 @@ var searchObj = {
             }
          })
     },
-    water_fall_fun:function(parent,clsName){
+    waterFallFn:function(parent,clsName){
         var oParent=$(parent);
         // 获取wrapper下所有class为box的元素
         var boxs=$(clsName);
@@ -40,7 +40,7 @@ var searchObj = {
             // 求出数组中的最小值
             var minH=Math.min.apply(this,arr);
             // 求出最小值在数组中的索引
-            var index=searchObj.getIndex(minH,arr);
+            var index=searchObj.getIndexFn(minH,arr);
             // 定位盒子
             boxs.eq(i).css({
                 'position':'absolute',
@@ -58,11 +58,10 @@ var searchObj = {
         });
     },
     // 获取值在数组中的索引
-    getIndex:function (val,arr){
-        for(var i=0;i<arr.length;i++){
-            if(arr[i]==val){
-                return i;
-            }
+    getIndexFn:function (val,arr){
+        var index = arr.indexOf(val)
+        if(index != -1){
+            return index;
         }
     }
   

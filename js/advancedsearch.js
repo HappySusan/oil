@@ -1,8 +1,8 @@
 var advancedsearchObj = {
     init: function() {
-        this.optionMore();
+        this.optionMoreFn();
     },
-    optionMore: function() {
+    optionMoreFn: function() {
         $(".lis").on("click","span",function(){
             $(this).addClass("current").siblings("span").removeClass("current");
             var activeVal= $(this).html(),

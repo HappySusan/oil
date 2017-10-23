@@ -1,8 +1,8 @@
 var votedetailObj = {
     init: function() {
-        this.loadMore();
+        this.loadMoreFn();
     },
-    loadMore: function() {
+    loadMoreFn: function() {
         var winH = $(window).height(); //页面可视区域高度 
         $(window).scroll(function() {
             var pageH = $(document.body).height();  

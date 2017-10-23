@@ -1,11 +1,9 @@
 var photographersObj = {
     init: function() {
-        this.loadMore();
-        this.sendEmail();
-        
-        
+        this.loadMoreFn();
+        this.sendEmailFn();
     },
-    loadMore: function() {
+    loadMoreFn: function() {
         var winH = $(window).height(); //页面可视区域高度 
         $(window).scroll(function() {
             var pageH = $(document.body).height();  
@@ -17,7 +15,7 @@ var photographersObj = {
             }
          })
     },
-    sendEmail:function(){
+    sendEmailFn:function(){
         $(".send_email").on("click",function(){
             var names=$(this).parents(".character_introduction").find($(".photographer_name a")).html();
             common.sendEmailDialog(names)

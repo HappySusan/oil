@@ -1,9 +1,9 @@
 var homepageObj = {
     init: function() {
         this.loadMore();
-        this.water_fall_fun("#search_result",".lis");
-        this.personal_type_fun();
-        this.sendEmail();
+        this.waterFallFn("#search_result",".lis");
+        this.personalTypeFn();
+        this.sendEmailFn();
     },
     loadMore: function() {
         var winH = $(window).height(); //页面可视区域高度 
@@ -17,25 +17,28 @@ var homepageObj = {
             }
          })
     },
-    sendEmail:function(){
+    sendEmailFn:function(){
         $(".send_email").on("click",function(){
             var names=$(".personal_name").html();
             common.sendEmailDialog(names)
         });
     },
-    personal_type_fun:function(){
+    personalTypeFn:function(){
         $("#personal_type").on("click","li",function(){
+            var dataId = $(this).data("id"),
+                $fansList = $("#follow_fans_list"),
+                $worksLists = $("#search_list");
             $(this).addClass("current").siblings("li").removeClass("current");
-            if ($(this).attr("data_id")==0||$(this).attr("data_id")==1||$(this).attr("data_id")==2) {
-                $("#follow_fans_list").addClass("none");
-                $("#search_list").removeClass("none");
-            }else if($(this).attr("data_id")==3||$(this).attr("data_id")==4){
-                $("#search_list").addClass("none");
-                $("#follow_fans_list").removeClass("none");
+            if (dataId==0||dataId==1||dataId==2) {
+                $fansList.addClass("none");
+                $worksLists.removeClass("none");
+            }else if(dataId==3||dataId==4){
+                $worksLists.addClass("none");
+                $fansList.removeClass("none");
             }   
         });
     },
-    water_fall_fun:function(parent,clsName){
+    waterFallFn:function(parent,clsName){
         var oParent=$(parent);
         // 获取wrapper下所有class为box的元素
         var boxs=$(clsName);
@@ -44,7 +47,6 @@ var homepageObj = {
         var pagew=oParent.outerWidth(true);
         var cols=Math.floor(pagew/w);
         var len=boxs.length;
-        console.log(pagew)
         // 计算wrapper的宽且让wrapper这个div在页面中居中显示
         oParent.css({
             'width':+w*cols+'px',
@@ -60,7 +62,7 @@ var homepageObj = {
             // 求出数组中的最小值
             var minH=Math.min.apply(this,arr);
             // 求出最小值在数组中的索引
-            var index=homepageObj.getIndex(minH,arr);
+            var index=homepageObj.getIndexFn(minH,arr);
             // 定位盒子
             boxs.eq(i).css({
                 'position':'absolute',
@@ -69,7 +71,6 @@ var homepageObj = {
             });
             arr[index]+=boxs.eq(i).outerHeight(true);
             // arr.push(boxs.eq(i).outerHeight(true));
-            console.log(arr);
           }
         }
         var maxH=Math.max.apply(this,arr);
@@ -78,11 +79,10 @@ var homepageObj = {
         });
     },
     // 获取值在数组中的索引
-    getIndex:function (val,arr){
-        for(var i=0;i<arr.length;i++){
-            if(arr[i]==val){
-                return i;
-            }
+    getIndexFn:function (val,arr){
+        var index = arr.indexOf(val)
+        if(index != -1){
+            return index;
         }
     }
 }
