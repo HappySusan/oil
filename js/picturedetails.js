@@ -1,8 +1,8 @@
 var advancedsearchObj = {
     init: function() {
         this.likeFn();
-        this.nextUserFn();
-        this.nextPicturesFn();
+        this.clickRightBtnFn($("#people_list"),$("#next_people"),1)
+        this.clickRightBtnFn($("#similar_pictures"),$("#next_picture"),2)
         this.sendEmailFn();
     },
     likeFn: function() {
@@ -14,42 +14,26 @@ var advancedsearchObj = {
             }
         });
     },
-    nextUserFn:function(){
-        var wid=0,
-            $FavUsers = $("#people_list"),
-            $FavBtn = $("#next_people");
-            $.each($FavUsers.find("li"),function(){
+    clickRightBtnFn: function($Lists, $Btn,Distinguish){
+        var wid=0;
+            $.each($Lists.find("li"),function(){
                 wid+=$(this).outerWidth(true);
             });
-            $FavUsers.css("width",wid+"px");
-            $FavBtn.on("click",function(){
-                $FavBtn.off("click");
-                var omveDistance=$FavUsers.find("li:first").outerWidth(true);
-                advancedsearchObj.moveFn($FavBtn,$FavUsers,omveDistance,1);
-                
+            $Lists.css("width",wid+"px");
+            $Btn.on("click",function(){
+                $Btn.off("click");
+                var omveDistance=$Lists.find("li:first").outerWidth(true);
+                advancedsearchObj.moveFn($Btn,$Lists,omveDistance,Distinguish);
             });
-    },
-    nextPicturesFn:function(){
-        var wid2=0;
-            $.each($("#similar_pictures").find("li"),function(){
-                wid2+=$(this).outerWidth(true);
-            });
-            $("#similar_pictures").css("width",wid2+"px");
-            $("#next_picture").on("click",function(){
-                $("#next_picture").off("click");
-                var omveDistance2=$("#similar_pictures").find("li:first").outerWidth(true);
-                advancedsearchObj.moveFn($("#next_picture"),$("#similar_pictures"),omveDistance2,2)
-               
-            })
     },
     moveFn:function(ele,object,omveDistance,Distinguish){
         object.animate({"left":-omveDistance+"px"},500,function(){
             object.append(object.find("li:first"));
             object.css({"left":0});
             if (Distinguish==1) {
-                advancedsearchObj.nextPeopleFun();
+                advancedsearchObj.clickRightBtnFn($("#people_list"),$("#next_people"),1)
             }else if (Distinguish==2) {
-                advancedsearchObj.nextPicturesFun();
+                advancedsearchObj.clickRightBtnFn($("#similar_pictures"),$("#next_picture"),2)
             }
         });
     },
