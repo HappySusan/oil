@@ -16,13 +16,13 @@ var votedetailObj = {
                     return false;
                 }
                 $.each($("#selected_tag li"),function(i,v){
-                        if ($(v).attr("data_id")==data_id) {
-                            alert("您已选择此标签！");
-                            flag=0;
-                            return false;
-                        }else if ($(v).attr("data_id")!=data_id) {
-                            flag=1;
-                        }
+                    if ($(v).attr("data_id")==data_id) {
+                        alert("您已选择此标签！");
+                        flag=0;
+                        return false;
+                    }else if ($(v).attr("data_id")!=data_id) {
+                        flag=1;
+                    }
                 });
                 if (flag) {
                     $("#selected_tag").prepend($(str));
@@ -32,24 +32,34 @@ var votedetailObj = {
             }
         });
         $("#selected_tag").on("click","span",function(){
-            console.log(9999)
             var ele=$(this).parents("li");
             ele.remove();
         });
         $("#custom_tag").keypress(function(event){
-            if(event.which == 13) {//这里应该添加一个标签走一个接口，然后返回ID，防盗data_id这里
+            if(event.which == 32) {
                 var str="",
-                    len=$("#selected_tag li").length;
-                    str="<li data_id="+"data_id"+">"+$(this).val()+"<span>×</span></li>";
-                if ($("#custom_tag").val("")=="") {
+                    len=$("#selected_tag li").length,
+                    new_tag_val=$("#custom_tag").val("");
+                    
+                if (new_tag_val=="") {
                     alert("请输入正确标签内容！")
-                }else if ($("#custom_tag").val("")!="") {
+                }else if (new_tag_val!="") {
                     if (len>=10) {
                         alert("最多选择10个标签");
                         return false;
                     }else{
-                        $("#selected_tag").prepend($(str));
-                        $("#custom_tag").val("")
+                        common.ajaxFun("url","GET",{"val":new_tag_val},function(res){//走一个接口，然后返回ID，放进新创建的标签里面data_id这里
+                            //返回数据格式{
+                            //     status:1,
+                            //     id:1
+                            // }
+                            if (res.status==1) {
+                                str="<li data_id="+res.id+">"+new_tag_val+"<span>×</span></li>";
+                                $("#selected_tag").prepend($(str));
+                                $("#custom_tag").val("")
+                            }
+                        }); 
+                        
                     }
                 }
                  
