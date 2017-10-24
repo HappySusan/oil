@@ -70,8 +70,9 @@
 .type_states li:hover{
     color: #F49818;    
 }
-.type_states li.current{
+.type_states li.current a{
     color: #F49818;
+    outline: none;
 }
 .like_list,.news_list,.comment_list{
     width: 1200px;

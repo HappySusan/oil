@@ -1,0 +1,62 @@
+@import url('./../css/common/common.css');
+body,.login_wrapper{
+    max-width: 1920px;
+    min-width: 1200px;
+    background: url("./../img/bg.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.login_wrapper img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.login_container{
+    width: 452px;
+    height: 484px;
+    background: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -242px 0 0 -226px;
+}
+.oil_logo{
+    margin: 70px auto 50px auto;
+    width: 322px;
+    height: 50px;
+}
+.oil_logo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.login_container ul{
+    width: 312px;
+    margin: 0 auto;
+}
+.login_container li{
+    margin-bottom: 15px;
+}
+.login_container li input{
+    display: block;
+    width: 310px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #cccccc;
+    outline: #cccccc;
+    border-radius: 4px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #999999;
+    text-indent: 15px;
+    background: none;
+}
+.login_container li input:focus{
+    outline: #F83F3F;
+    border: 1px solid #F83F3F;
+}

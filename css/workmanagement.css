@@ -31,8 +31,8 @@
     border-bottom: solid 4px  #F49818;
     font-weight: bold;
 }
-.center_set_type ul li.current a{
-    color: #F49818;
+.type_states ul li.current a,.center_set_type ul li.current a{
+    color: #F49818;outline: none;
 }
 .center_set_type ul li:hover a{
     color: #F49818;

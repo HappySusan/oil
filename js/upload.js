@@ -7,22 +7,23 @@ var votedetailObj = {
     originalTagFn:function(){
         $("#more_tags").on("click","li",function(){
             var vals=$(this).html(),
-                data_id=$(this).attr("data_id"),
+                dataId=$(this).data("id"),
                 str="",
                 flag=0,
                 len=$("#selected_tag li").length;
-                str="<li data_id="+data_id+">"+vals+"<span>×</span></li>";
+                console.log(dataId)
+                str="<li data-id="+dataId+">"+vals+"<span>×</span></li>";
             if (len!=0) {
                 if (len>=10) {
                     alert("最多选择10个标签");
                     return false;
                 }
                 $.each($("#selected_tag li"),function(i,v){
-                    if ($(v).attr("data_id")==data_id) {
+                    if ($(v).attr("data-id")==dataId) {
                         alert("您已选择此标签！");
                         flag=0;
                         return false;
-                    }else if ($(v).attr("data_id")!=data_id) {
+                    }else if ($(v).attr("data-id")!=dataId) {
                         flag=1;
                     }
                 });
@@ -54,13 +55,13 @@ var votedetailObj = {
                         alert("最多选择10个标签");
                         return false;
                     }else{
-                        common.ajaxFn("url","GET",{"val":new_tag_val},function(res){//走一个接口，然后返回ID，放进新创建的标签里面data_id这里
+                        common.ajaxFn("url","GET",{"val":new_tag_val},function(res){//走一个接口，然后返回ID，放进新创建的标签里面data-id这里
                             //返回数据格式{
                             //     status:200,
                             //     id:1
                             // }
                             if (res.status==200) {
-                                str="<li data_id="+res.id+">"+new_tag_val+"<span>×</span></li>";
+                                str="<li data-id="+res.id+">"+new_tag_val+"<span>×</span></li>";
                                 $("#selected_tag").append($(str));
                                 $("#custom_tag").val("")
                             }
