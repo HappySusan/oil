@@ -52,7 +52,7 @@ body,.login_wrapper{
     border-radius: 4px;
     font-family: PingFangSC-Regular;
     font-size: 12px;
-    color: #999999;
+    color: #333333;
     text-indent: 15px;
     background: none;
     margin-bottom: 15px;
@@ -101,6 +101,8 @@ body,.login_wrapper{
     font-family: PingFangSC-Regular;
     font-size: 12px;
     color: #F83F3F;
+    height: 17px;
+    line-height: 17px;
 }
 .login_btn{
     background: #F49818;
