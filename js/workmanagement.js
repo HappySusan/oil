@@ -6,7 +6,7 @@ var fansObj = {
     worksStatusFn:function(){
         $("#type_states").on("click","li",function(){
             $(this).addClass("current").siblings("li").removeClass("current")
-        })
+        });
     },
     loadMoreFn: function() {
         var winH = $(window).height(); //页面可视区域高度 

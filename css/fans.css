@@ -55,8 +55,9 @@
     margin-right: 30px;
     cursor: pointer;
 }
-.fans_or_follow p span.current{
+.fans_or_follow p span.current a{
     color: #F49818;
+    outline: none;
 }
 .follow_fans_list_container{
     margin: 0 auto;

@@ -1,5 +1,5 @@
 @import url('./../common/reset.css');
-a{outline: none;}
+a{outline: none;color: #999999}
 .none {
     display: none;
 }
