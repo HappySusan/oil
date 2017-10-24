@@ -52,6 +52,20 @@
     color: #999999;
     margin-right: 40px;
     cursor: pointer;
+    position: relative;
+}
+.type_states li.comment span{
+    position: absolute;
+    right: -14px;
+    top: -10px;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    background: #FF1A1A;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
 }
 .type_states li:hover{
     color: #F49818;    
@@ -59,16 +73,15 @@
 .type_states li.current{
     color: #F49818;
 }
-.news{
+.like_list,.news_list,.comment_list{
     width: 1200px;
     margin: 0 auto;
-
 }
-.news li{
+.like_list li,.news_list li,.comment_list li{
     margin-bottom: 15px;
     background: #fff;
 }
-.news_infor:after,.news li:after,.reply:after{
+.news_infor:after,.news_list li:after,.reply:after,works_pic:after{
     content:"";
     display: block;    
     width: 0;
@@ -80,14 +93,14 @@
 .news_infor{
     /* height: 60px; */
 }
-.like_pic{
+.like_user{
     width: 60px;
     height: 60px;
     border-radius: 50%;
     overflow: hidden;
     margin: 30px 0 0px 30px;
 }
-.like_pic img{
+.like_user img{
     display: block;
     width: 100%;
     height: 100%;
@@ -177,6 +190,9 @@
 .chat p{
     font-family: PingFangSC-Regular;
     font-size: 14px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
     color: #333333;
 }
 .reply{
@@ -212,4 +228,61 @@
 .y_reply_btn{
     background: #CCCCCC;
     color: #999999;
+}
+.my_chat{
+    background: #F2F2F2;
+    border-radius: 4px;
+    width: 940px;
+    /* height: 73.5px; */
+    margin-top: 16.5px;
+}
+.character{
+    padding: 16.5px 0 0 20px;
+    line-height: 22px;
+    font-family: PingFang-SC-Semibold;
+    font-size: 16px;
+    color: #333333;
+}
+.my_chat p{
+    padding: 5px 20px 10px 20px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #333333;
+    line-height: 20px;
+}
+.every_like .like_user{
+    margin: 30px 0 30px 30px
+}
+.every_like .works_pic{
+    margin:20px 30px 20px 0;
+}
+.every_like .like_inofr{
+    width: 925px;
+}
+.every_comment .chat{
+    margin: 0px 30px 30px 110px
+}
+.every_comment .works_pic{
+    margin: 20px 30px 20px 0;
+}
+.like_inofr p{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #333333;
+    padding-top: 24px;
+    line-height: 20px;
+    padding-bottom: 30px;
+}
+.every_comment .like_inofr{
+    width: 875px;   
+}
+.every_comment .works_pic{
+    width: 152px;
+    height: 115px;
+    
+}
+.like_inofr p{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
