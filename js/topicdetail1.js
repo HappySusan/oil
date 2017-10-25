@@ -1,6 +1,12 @@
 var topicObj = {
     init: function() {
         this.loadMoreFn();
+        this.TabsChangeFn();
+    },
+    TabsChangeFn:function(){
+        $("#works_type").on("click","a",function(){
+            $(this).addClass("current").siblings("a").removeClass("current")
+        })
     },
     loadMoreFn: function() {
         var winH = $(window).height(); //页面可视区域高度 
