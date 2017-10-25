@@ -3,7 +3,6 @@
 @import url('./../css/common/footer.css');
 .topicdetail1_warpper{
     width: 1200px;
-    overflow: hidden;
     margin: 40px auto 0 auto;
 }
 .banner{
@@ -175,6 +174,15 @@
     float: left;
     margin-right: 14px;
     margin-bottom: 14px;
+}
+.lp_pics:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
 }
 .lp_pic_user dl{
     float:left;
