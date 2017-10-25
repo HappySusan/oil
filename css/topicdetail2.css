@@ -1,0 +1,230 @@
+@import url('./../css/common/common.css');
+@import url('./../css/common/header.css');
+@import url('./../css/common/footer.css');
+.topicdetail1_warpper{
+    width: 1200px;
+    overflow: hidden;
+    margin: 40px auto 60px auto;
+}
+.banner{
+    width: 1200px;
+    height: 500px;
+}
+.banner img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.topic_record{
+    width: 1116px;
+    float: right;
+    background: #FEFAF3;
+    border: 2px solid #F49818;
+    margin-top: 70px;
+}
+.topic_record_pic{
+    width: 560px;
+    height: 316px;
+    margin: -30px 0 0 -84px;
+    float: left;
+}
+.topic_record_pic img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.topic_record_article{
+    padding:0 30px 0 506px;
+}
+.topic_record_article h3{
+    font-family: PingFang-SC-Semibold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 28px;
+    padding-top: 50px;
+}
+.topic_record_article p{
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    line-height: 28px;
+    padding-top: 20px;
+    text-indent: 35px;
+    padding-bottom: 50px;
+}
+.topic_record_article:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}
+.group_tit{
+    height: 36px;
+    background: url("./../img/Group.png") no-repeat center center;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 36px;
+    font-family: PingFang-SC-Semibold;
+    font-size: 24px;
+    color: #F49818;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.wokers_list{
+    width: 1200px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.wokers_list .lp_pics{
+    width: 1256px;
+    height: 367px;
+    overflow: hidden;
+}
+.wokers_list .lp_pics li .lp_pic dd{
+    height: 151px;
+    width: 290px;
+    background: #fff;
+}
+.lp_pic_name{
+    border-bottom: solid 1px #F1F1F1;
+    height: 90px;
+}
+.lp_pic_name h5{
+    font-family: PingFang-SC-Semibold;
+    font-size: 18px;
+    color: #333333;
+    padding:20px 15px 0 15px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    line-height: 25px;
+}
+.lp_pic_name ul{
+    padding-left: 15px;
+}
+.lp_pic_name li{
+    float: left;
+    padding-right: 16px;
+    padding-top:5px;
+}
+.lp_pic_name ul:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}
+.lp_pic_name .fav_grey{
+    display: block;
+    height: 20px;
+    width:20px;
+    background: url('../img/icon_fav_grey.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.lp_pic_name .share_grey{
+    display: block;
+    height: 20px;
+    width:20px;
+    background: url('../img/icon_share_grey.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.lp_pic_name .watch_grey{
+    display: block;
+    height: 20px;
+    width:20px;
+    background: url('../img/icon_watch_grey.png') no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.lp_pic_name .txt{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #999999;
+    float: left;
+    line-height: 20px;
+    padding-left: 10px;
+}
+.lp_pic_user{
+    display: block;
+    border:none;
+    padding-left: 15px;
+    width: 100%;
+    height: 60px;
+}
+.lp_pic_img{
+    height: 216px;
+    width: 290px;
+}
+.lp_pic_img img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin:0 auto;
+}
+.lp_pics li{
+    height: 100%;
+    float: left;
+    margin-right: 14px;
+    margin-bottom: 14px;
+}
+.wokers_list .lp_pics:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}
+.lp_pic_user dl{
+    float:left;
+    height: 60px;
+    line-height: 60px; 
+    width:165px;  
+    
+}
+.lp_pic_user span{
+    float: right;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #999999;
+    padding-right:15px;
+    line-height: 60px;
+}
+.lp_pic_user dl dt{
+    float:left;
+    padding:15px 10px 0 0px;
+}
+.lp_pic_user dl dt img{
+    height: 30px;
+    width:30px;
+    display: block;
+}
+.wokers_list .lp_pics li .lp_pic dd .lp_pic_user dd{
+    height: auto;
+    width: 120px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis; 
+    position: relative;
+}
+.photographer_icon{
+    height: 24px;
+    width: 21px;
+    background: url('../img/icon_photographer.png') no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    top:18px;
+    margin-left:5px;
+}
