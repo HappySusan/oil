@@ -131,13 +131,14 @@ a{outline: none;color: #999999}
 }
 .dialog{
     width: 522px;
-    height: 178px;
+    /* height: 178px; */
     background: #fff;
     position: fixed;
     left: 50%;
     top: 50%;
     margin: -89px 0 0 -261px;
     z-index:10000;
+    padding-bottom: 30px;
 }
 .dialog h3{
     font-family: PingFang-SC-Semibold;
