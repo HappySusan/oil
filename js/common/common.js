@@ -21,6 +21,38 @@ function Common(){
 	        }
 	    })
     },
+     /**
+     * 下载，分享的弹框
+     * @param {tit} 弹框标题
+     * @param {content} 弹框内容
+     * @param {lBtn} 左边按钮内容
+     * @param {rBtn} 右边按钮内容
+     * @param {leftCallback} 左边按钮的回调
+     * @param {rightCallback} 右边按钮的回调，传回调走回调，没传就默认关闭
+     */
+    _self.commonDialog=function(tit,content,lBtn,rBtn,leftCallback,rightCallback){
+        var str='<div class="dialog" id="dialog">'
+                +'<h3>'+tit+'</h3>'
+                +'<p>'+content+'</p>'
+                +'<div>'
+                +'<button id="left_btn">'+lBtn+'</button>'
+                +' <button class="cancle" id="cancle">'+rBtn+'</button>'
+                +'</div>'
+                +'</div>'
+                +'<div class="common_mask" id="common_mask"></div>'
+        $("body").append(str); 
+        $("#left_btn").click(function(){
+            leftCallback();
+        });
+        $("#cancle").click(function(){
+            if (rightCallback) {
+                rightCallback()
+            }else{
+                $("#dialog,#common_mask").remove();
+            }
+        });
+        
+    },
     /**
      * 获取地址栏问号后参数
      * @param {name} 等号前参数

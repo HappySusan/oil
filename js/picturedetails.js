@@ -4,6 +4,27 @@ var advancedsearchObj = {
         this.clickRightBtnFn($("#people_list"),$("#next_people"),1)
         this.clickRightBtnFn($("#similar_pictures"),$("#next_picture"),2)
         this.sendEmailFn();
+        this.shareFn();
+        this.downloadFn();
+    },
+    shareFn:function(){
+        var $share_btn=$("#share_btn");
+            $share_btn.click(function(){
+                common.commonDialog("是否分享此作品？","这个作品不错，我要分享给我的粉丝们","分享","取消",function(){
+                    alert("确定分享处理！")
+                })
+            });
+    },
+    downloadFn:function(){
+        var $download_btn=$("#download_sample,#download_artwork");
+            $download_btn.click(function(){
+                common.commonDialog("是否申请授权？","原图下载需要作者的授权，如果您确认喜欢此作品，会给作者发送授权申请","申请","取消",function(){
+                    alert("确定下载处理！")
+                },function(){
+                    alert("取消下载处理！")}
+                )
+            });
+
     },
     likeFn: function() {
         $("#dislike").on("click",function(){
