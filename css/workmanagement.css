@@ -74,6 +74,15 @@
     float: left;
     margin: 0 14px 14px 0;
 }
+.works_container li:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}
 .works_pic{
     height: 216px;
     

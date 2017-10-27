@@ -131,7 +131,15 @@
     text-decoration: underline;
     cursor: pointer;
 }
-
+.my_center .Ylogin a:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}
 .my_center .Ylogin dd,
 .my_center .Nlogin dd {
     float: right;

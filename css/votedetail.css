@@ -134,7 +134,7 @@
     background: #ffffff;
     margin: 0 14px 14px 0;
 }
-.votedetail_list_container li:after{
+.votedetail_list_container ul:after{
     content:"";
     display: block;    
     width: 0;

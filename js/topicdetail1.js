@@ -32,7 +32,7 @@ var topicObj = {
             var pageH = $(document.body).height();  
             var scrollT = $(window).scrollTop(); //滚动条top  
             var aa = (pageH - winH - scrollT) / winH;  
-            if (aa < 0.02) { 
+            if (aa < 1) { 
                 if (topicObj.isRequest) {
                     topicObj.isRequest=false;
                     common.ajaxFn("../js/test.json","POST","",topicObj.successFn,topicObj.ErrorFn)
