@@ -4,7 +4,7 @@ function Common(){
      * ajax 调用封装
      * 包括 路径url，请求方式types，数据内容option，成功返回数据后的回调，异步与否
      */
-	_self.ajaxFn=function(url,types,option,callback,asyncType){  
+	_self.ajaxFn=function(url,types,option,callback,errorcallback,asyncType){  
 	    var async=asyncType?asyncType:true;
 	    $.ajax({
 	        url:url,
@@ -16,8 +16,13 @@ function Common(){
 	            if($.isFunction(callback)) callback(rs)
 	        },
 	        error:function(rs){
-                alert("请求异常，请重试")
-	            console.log(rs)
+                if ($.isFunction(errorcallback)) {
+                    errorcallback()
+                }else{
+                    alert("请求异常，请重试")
+                    console.log(rs)
+                }
+                
 	        }
 	    })
     },
