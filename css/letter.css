@@ -82,7 +82,7 @@
     margin-bottom: 15px;
     background: #fff;
 }
-.news_infor:after,.news_list li:after,.reply:after,works_pic:after{
+.like_list li:after,.news_list li:after,.comment_list li:after,.news_infor:after,.news_list li:after,.reply:after,works_pic:after{
     content:"";
     display: block;    
     width: 0;
