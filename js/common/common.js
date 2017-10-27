@@ -1,3 +1,5 @@
+var isRequest=false;
+
 function Common(){
     var _self = this;
     /**
@@ -115,6 +117,29 @@ function Common(){
             }
             
         });
+    },
+    /**
+     * 加载更多
+     * 根据本文件中的全局变量 isRequest来判断是否需要加载更多
+     * callback：滚动条滚到底部的回调（回调需在每个页面初始化调用一次）
+     * 需要在原页面设置totlePage，详情案例参考topic.js
+     */
+    _self.loadMoreFn= function(callback) {
+        //判断是否到底部，继续请求数据
+        var winH = $(window).height(); //页面可视区域高度 
+        $(window).scroll(function() {
+            var pageH = $(document.body).height();  
+            var scrollT = $(window).scrollTop(); //滚动条top  
+            var aa = (pageH - winH - scrollT) / winH;  
+            if (aa < 0.02) { 
+                //去加载更多
+                if(isRequest){
+                    callback?callback():"";
+                }else{
+                    isRequest = false;
+                }
+            }
+         })
     }
 }
 common=new Common();
