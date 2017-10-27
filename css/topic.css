@@ -16,6 +16,15 @@
     background: #ffffff;
     margin: 0 14px 14px 0px;
 }
+.every_topic:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}
 .topic_detail_wrapper,.topic_pic{
     float: left;
     height: 225px;
