@@ -57,6 +57,8 @@
     text-overflow:ellipsis;
 }
 .topic_detail_wrapper .topic_describe{
+    height: 100px;
+    overflow-y: scroll;
     padding:10px 20px 0 20px;
     font-family: PingFangSC-Regular;
     font-size: 14px;
