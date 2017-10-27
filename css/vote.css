@@ -48,6 +48,15 @@
     padding-bottom: 20px;
     margin: 0 14px 14px 0;
 }
+.every_vote:after{
+    content:"";
+    display: block;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    zoom: 1;
+}
 .every_vote h3{
     padding: 30px 20px 0 20px;
     font-family: PingFang-SC-Semibold;
