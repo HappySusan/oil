@@ -1,11 +1,12 @@
 var advancedsearchObj = {
     init: function() {
         this.likeFn();
-        this.clickRightBtnFn($("#people_list"),$("#next_people"),1)
-        this.clickRightBtnFn($("#similar_pictures"),$("#next_picture"),2)
+        this.clickRightBtnFn($("#people_list"),$("#next_people"),1);
+        this.clickRightBtnFn($("#similar_pictures"),$("#next_picture"),2);
         this.sendEmailFn();
         this.shareFn();
         this.downloadFn();
+         
     },
     shareFn:function(){
         var $share_btn=$("#share_btn");
@@ -37,15 +38,20 @@ var advancedsearchObj = {
     },
     clickRightBtnFn: function($Lists, $Btn,Distinguish){
         var wid=0;
-            $.each($Lists.find("li"),function(){
-                wid+=$(this).outerWidth(true);
+            $.each($Lists.find("li"),function(i,v){
+                wid+=$(v).outerWidth(true);
             });
-            $Lists.css("width",wid+"px");
-            $Btn.on("click",function(){
-                $Btn.off("click");
-                var omveDistance=$Lists.find("li:first").outerWidth(true);
-                advancedsearchObj.moveFn($Btn,$Lists,omveDistance,Distinguish);
-            });
+            $Lists.css("width",(wid+1)+"px");
+            if (wid>1200) {
+                $Btn.on("click",function(){
+                    $Btn.off("click");
+                    var omveDistance=$Lists.find("li:first").outerWidth(true);
+                    advancedsearchObj.moveFn($Btn,$Lists,omveDistance,Distinguish);
+                });
+            }else{
+                $Btn.addClass("none");
+            }
+            
     },
     moveFn:function(ele,object,omveDistance,Distinguish){
         object.animate({"left":-omveDistance+"px"},500,function(){
@@ -65,4 +71,7 @@ var advancedsearchObj = {
     }
 
 }
-advancedsearchObj.init();
+window.onload = function(){
+    advancedsearchObj.init();   
+}
+ 
