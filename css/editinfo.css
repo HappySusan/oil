@@ -202,3 +202,34 @@
     float: right;
     cursor: pointer;
 }
+.two_input input,.two_input p{
+    float: left;
+}
+.two_input p{
+    padding:0 30px 0 50px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #333333;
+}
+.two_input{
+    margin-bottom: 30px;
+}
+.two_input input{
+    margin-bottom: 30px;
+    background: #F2F2F2;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    height: 38px;
+    width: 399px;
+}
+.two_input .department,.two_input .contact{
+    padding-left: 70px;
+}
+.two_input:after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
