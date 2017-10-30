@@ -353,6 +353,7 @@ operation:after{
     height: 120px;
     margin-right: 10px;
     float: left;
+    overflow: hidden;
 }
 .similar_pictures ul li a,
 .similar_pictures ul li a img{
