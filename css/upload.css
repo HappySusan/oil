@@ -56,11 +56,12 @@
     padding-top: 10px;
 }
 .works_img h4{
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 .works_img div{
     width: 289px;
     height: 216px;
+    display: none;
 } 
 .works_img div img{
     display: block;
@@ -80,8 +81,17 @@
     cursor: pointer;
     text-align: center;
     margin-left: 30px;
-    position: relative;
+    /* position: relative;
     top: 176px;
+    top:10px; */
+}
+.file_path{
+    height: 38px;
+    width: 220px;
+    /* position: relative;
+    top:10px; */
+    color: #ccc;
+    font-size: 14px;
 }
 .iterm input{
     display: block;

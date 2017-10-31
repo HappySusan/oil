@@ -2,7 +2,38 @@ var votedetailObj = {
     init: function() {
         this.originalTagFn();
         this.delCheckedTagFn();
-        this.pressBlankFn()
+        this.pressBlankFn();
+        this.uploadFn();
+        this.submitFn();
+    },
+    submitFn: function(){
+        $("#submitBtn").click(function(){
+            var title = $.trim($("#title").val());
+            if($("#change_works").val() == ""){
+                alert('请上传图片');
+                return;
+            };
+            if(title == "" || title == " "){
+                alert('请填写标题');
+                return;
+            };
+            if($("#selected_tag li").length==0){
+                alert('请选择图片对应的标签');
+                return;
+            }
+            //此处写提交代码
+            
+        });
+    },
+    uploadFn: function(){
+        $("#change_works").on('change',function(){
+            var file = $(this).val();
+            file == ""? $("#filePath").text('未上传任何文件').css('color','#ccc') : $("#filePath").text(getFileName(file)).css('color','#000');
+            function getFileName(o){
+                var pos=o.lastIndexOf("\\");
+                return o.substring(pos+1);  
+            }
+        })
     },
     originalTagFn:function(){
         $("#more_tags").on("click","li",function(){
@@ -11,7 +42,6 @@ var votedetailObj = {
                 str="",
                 flag=0,
                 len=$("#selected_tag li").length;
-                console.log(dataId)
                 str="<li data-id="+dataId+">"+vals+"<span>×</span></li>";
             if (len!=0) {
                 if (len>=10) {
