@@ -64,21 +64,22 @@
         <h2>上传作品</h2>
         <div class="iterm works_img">
             <h4>选择图片</h4>
-            <div class="fl"><img src="./../img/banner3.png" alt=""></div>
+            <!-- <div class="fl"><img src="./../img/banner3.png" alt=""></div> -->
+            <p id="filePath" class="input fl file_path">未上传任何文件</p> 
             <label for="change_works" class="change_works">选择作品</label>
-            <input type="file" id="change_works">    
+            <input type="file" id="change_works">  
         </div> 
         <div class="iterm title">
             <h4>标题</h4>
-            <input type="text" class="input" placeholder="请输入标题"> 
+            <input type="text" class="input" placeholder="请输入标题" id="title"> 
         </div>
         <div class="iterm adress">
             <h4>地点</h4>
-            <input type="text" class="input" placeholder="请输入地点"> 
+            <input type="text" class="input" placeholder="请输入地点" id="adress"> 
         </div>
         <div class="iterm img_desc">
             <h4>图片描述</h4>
-            <input type="text" class="input" placeholder="请输入图片描述"> 
+            <input type="text" class="input" placeholder="请输入图片描述" id="img_desc"> 
         </div>
         <div class="iterm tag">
             <h4>标签</h4>
@@ -118,7 +119,7 @@
             <input type="radio" name="authorization" id="Nauthorization"> 
             <label for="Nauthorization"><span><i></i></span>否</label>  
         </div>
-        <div class="submit_works">提交</div>
+        <div class="submit_works" id="submitBtn">提交</div>
     </div>
 </div>
 <div class="footer">
