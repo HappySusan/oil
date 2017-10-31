@@ -1,7 +1,7 @@
 @import url('./../css/common/common.css');
 @import url('./../css/common/header.css');
 @import url('./../css/common/footer.css');
-@import url('./../css/uploadimg/jquery.Jcrop.min.css');
+@import url('./../lib/uploadimg/jquery.Jcrop.min.css');
 .center_set_type{
     max-width: 1920px;
     min-width: 1200px;
