@@ -48,6 +48,8 @@
     border-bottom: solid 1px #E6E6E6;
     background: #fff;
     padding-bottom: 30px;
+    clear: both;
+    overflow: hidden;
 }
 .every_infor h3{
     padding: 40px 0 30px 30px;
@@ -79,8 +81,20 @@
 }
 .head_pic{
     margin-bottom: 30px;
+    height: 200px;
 }
-.head_pic,.choice_bg{
+.headerPic_form{
+    width: 600px;
+    float: left;
+    padding-left:30px;
+}
+.jcrop-tracker,
+.jcrop-holder,
+.jcrop-holder img{
+    width: auto!important;
+    height: 150px!important;
+}
+.choice_bg{
     height: 100px;
 }
 .head_pic p,.choice_bg p{
