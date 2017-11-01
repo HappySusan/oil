@@ -61,35 +61,43 @@
     </ul>
 </div>
 <div class="infor_container">
+        <div class="every_infor headerPic_infor">
+                <h3>上传头像</h3>
+                <div class="head_pic">
+                        <p class="fl">选择头像</p>
+                        <!-- <label class="head_img fl" for="image_file"><img src="./../img/banner.png" alt=""></label> 
+                        <input type="file" name="image_file" id="image_file" class="none" onchange="fileSelectHandler()" />           -->
+                        <div class="headerPic_form">
+
+                            <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php" onsubmit="return checkForm()">
+                            <!-- hidden crop params -->
+                            <input type="hidden" id="x1" name="x1"autocomplete="off" />
+                            <input type="hidden" id="y1" name="y1" autocomplete="off"/>
+                            <input type="hidden" id="x2" name="x2"autocomplete="off" />
+                            <input type="hidden" id="y2" name="y2"autocomplete="off" />
+                            <input type="file" name="image_file" id="image_file" onchange="fileSelectHandler()" />
+                            <div class="error">注意：上传前，先截图</div>
+                            <div class="step2">
+                                <img id="preview" />
+                                    <div class="info">
+                                        <ul>
+                                            <li><label>文件大小</label> <input type="text" id="filesize" name="filesize" class="input" autocomplete="off" /></li>
+                                            <li><label>类型</label> <input type="text" id="filetype" name="filetype" class="input"autocomplete="off"/></li>
+                                            <li><label>图像尺寸</label> <input type="text" id="filedim" name="filedim" class="input"autocomplete="off"/></li>
+                                            <li><label>宽度</label> <input type="text" id="w" name="w" class="input"autocomplete="off"/></li>
+                                            <li><label>高度</label> <input type="text" id="h" name="h" class="input"autocomplete="off"/></li>
+                                        </ul>
+                                    </div>
+                                <input type="submit" value="上传" class="btn" />
+                            </div>
+                        </form>
+                        </div>
+                    
+                    </div>
+            </div>
     <div class="every_infor basic_infor">
         <h3>基本信息</h3>
-        <div class="head_pic">
-            <p>选择头像</p>
-            <!-- <label class="head_img fl" for="image_file"><img src="./../img/banner.png" alt=""></label> 
-            <input type="file" name="image_file" id="image_file" class="none" onchange="fileSelectHandler()" />           -->
-            <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php" onsubmit="return checkForm()">
-                <!-- hidden crop params -->
-                <input type="hidden" id="x1" name="x1"autocomplete="off" />
-                <input type="hidden" id="y1" name="y1" autocomplete="off"/>
-                <input type="hidden" id="x2" name="x2"autocomplete="off" />
-                <input type="hidden" id="y2" name="y2"autocomplete="off" />
-                <input type="file" name="image_file" id="image_file" onchange="fileSelectHandler()" />
-                <div class="error">注意：上传前，先截图</div>
-                <div class="step2 none">
-                    <img id="preview" />
-                        <div class="info none">
-                            <ul>
-                                <li><label>文件大小</label> <input type="text" id="filesize" name="filesize" class="input" autocomplete="off" /></li>
-                                <li><label>类型</label> <input type="text" id="filetype" name="filetype" class="input"autocomplete="off"/></li>
-                                <li><label>图像尺寸</label> <input type="text" id="filedim" name="filedim" class="input"autocomplete="off"/></li>
-                                <li><label>宽度</label> <input type="text" id="w" name="w" class="input"autocomplete="off"/></li>
-                                <li><label>高度</label> <input type="text" id="h" name="h" class="input"autocomplete="off"/></li>
-                            </ul>
-                        </div>
-                    <!-- <input type="submit" value="上传" class="btn" /> -->
-                </div>
-            </form>
-        </div>
+        
         <div class="second_tit two_input username_department">
             <p>真实姓名</p><input type="text" class="input" placeholder="请输入真实姓名">
             <p class="department">部门名称</p><input type="text" class="input" placeholder="请输入所属部门">
