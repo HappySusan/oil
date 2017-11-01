@@ -252,7 +252,32 @@
     border: 1px solid #E6E6E6;
     border-radius: 4px;
     height: 38px;
+    font-size: 14px;
     width: 399px;
+}
+.two_input .work_place_select{
+    width: 428px;
+    height: 40px;
+    float: left;
+    border: 1px solid #E6E6E6;
+    outline: none;
+    background: #F2F2F2;
+    border-radius: 4px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #333333;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#999;font-size:14px;
+}
+    　　:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#999;font-size:14px;
+}
+    　　::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#999;font-size:14px;
+}
+    　　:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#999;font-size:14px;
 }
 .two_input .department,.two_input .contact{
     padding-left: 70px;
