@@ -1,7 +1,10 @@
 var searchObj = {
     init: function() {
-        this.loadMoreFn();
-        this.waterFallFn("#search_result",".lis");
+        var _this = this;
+        _this.loadMoreFn();
+        setTimeout(function(){
+            _this.waterFallFn("#search_result",".lis");
+        },0);
     },
     loadMoreFn: function() {
         var winH = $(window).height(); //页面可视区域高度 
