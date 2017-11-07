@@ -1,14 +1,23 @@
-.footer{
+.footerWrapper{
     max-width: 1920px;
     min-width: 1200px;
-    margin:0 auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     background: #fff;
+    height: 110px;
+}
+.footer{
+    width: 1200px;
+    margin:0 auto;
     height: 110px;
     font-family: PingFangSC-Regular;
     font-size: 14px;
     color: #666666;
     line-height: 26px;
     text-align: center;
+    background: #fff;
     padding-top:30px;
 }
 .footer b{

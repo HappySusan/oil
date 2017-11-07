@@ -1,5 +1,8 @@
 @import url('./../common/reset.css');
 a{outline: none;color: #999999}
+html,body{
+    min-height: 100%;
+}
 .none {
     display: none;
 }

@@ -2,16 +2,6 @@
     "totalItems":20,
     "data":[
         {"name":"王一","age":1},
-        {"name":"王二","age":2},
-        {"name":"王三","age":3},
-        {"name":"王四","age":4},
-        {"name":"王一","age":5},
-        {"name":"王二","age":6},
-        {"name":"王三","age":7},
-        {"name":"王四","age":8},
-        {"name":"王一","age":9},
-        {"name":"王二","age":10},
-        {"name":"王三","age":11},
-        {"name":"王五","age":12}
+        {"name":"王二","age":2}
     ]
 }
