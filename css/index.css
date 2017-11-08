@@ -296,11 +296,17 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     cursor: pointer;
     position: relative;
 }
-.rec .r_c_left a img{
+.rec .r_c_left a.r_l_a{
     display: block;
     height: 478px;
     width:390px;
 }
+.rec .r_c_left a.r_l_a img{
+    display: block;
+    height: 100%;
+    width:auto;
+}
+
 .rec .r_user{
     display: block;
     height: 60px;
@@ -432,10 +438,17 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     height: 202px;
     width:255px;
 }
-.r_c_center .r_c_t_left a img, .r_c_center .r_c_t_right a img{
+.r_c_center .r_c_t_left a, .r_c_center .r_c_t_right a {
     display: block;
     height: 202px;
     width:255px;
+    overflow: hidden;
+}
+.r_c_center .r_c_t_left a img, .r_c_center .r_c_t_right a img{
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
 }
 .r_c_center .r_c_bottom{
     height: 261px;
@@ -443,10 +456,19 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     overflow: hidden;
     position: relative;
 }
-.rec .r_c_bottom a img{
+.rec .r_c_bottom a{
     display: block;
     height: 201px;
     width:524px;
+    overflow: hidden;
+}
+.rec .r_c_bottom a img{
+    display: block;
+    height: 100%;
+    width: auto;
+    margin:0 auto;
+    /* height: 201px;
+    width:524px; */
 }
 .rec .r_c_bottom a+ .hover_show{
     height: 201px;
@@ -462,10 +484,22 @@ input:-moz-placeholder { font-family: PingFangSC-Regular;font-size: 16px;color: 
     overflow: hidden;
     position: relative;
 }
-.rec .r_c_right a img{
+.rec .r_c_right a{
     display: block;
     height: 478px;
-    width:258px;
+    width: 100%;
+    overflow: hidden;
+}
+.rec .r_c_right a{
+    display: block;
+    height: 478px;
+    width:100%;
+}
+.rec .r_c_right a img{
+    display: block;
+    height: 100%;
+    width:auto;
+    margin: 0 auto;
 }
 .rec .r_c_right a+ .hover_show{
     height: 478px;
