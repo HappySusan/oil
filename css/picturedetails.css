@@ -73,7 +73,7 @@ operation:after{
     background: url("./../img/icon_share_black.png") no-repeat 25px center;
     background-size: 20px 20px;
     text-align: center;
-    padding-left: 20px;
+    padding-left: 30px;
     line-height: 28px;
 }
 .picture_infor{
@@ -164,6 +164,10 @@ operation:after{
     border: 1px solid #F49818;
     color: #F49818;
 }
+.download_artwork_gray{
+    border: 1px solid #F49818;
+    color: #999999;
+}
 .copyright_tips{
     font-family: PingFangSC-Regular;
     font-size: 12px;
@@ -222,6 +226,10 @@ operation:after{
     margin-top: 10px;
 }
 .introduce_p{
+    clear:both;
+    width: 330px;
+    height: 50px;
+    overflow: hidden;
     margin: 10px 30px 30px 30px;
     font-family: PingFangSC-Regular;
     font-size: 14px;
@@ -306,6 +314,7 @@ operation:after{
     margin: 0 auto;
 }
 .like_picture_list ul li dd{
+    text-align: center;
     width: 84px;
     font-family: PingFangSC-Regular;
     font-size: 14px;
@@ -353,7 +362,7 @@ operation:after{
     height: 120px;
     margin-right: 10px;
     float: left;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .similar_pictures ul li a,
 .similar_pictures ul li a img{

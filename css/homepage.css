@@ -4,7 +4,7 @@
 .homepage_top_bg{
     max-width: 1920px;
     min-width: 1200px;
-    background: url("./../img/banner2.png") no-repeat;
+    background: url("./../img/banner.png") no-repeat;
     background-size: 100% 100%;
     margin: 0 auto;
     width: 100%;
@@ -252,7 +252,7 @@
 .search_container{
     width: 1200px;
     overflow: hidden;
-    margin: 0px auto 30px auto;
+    margin: 30px auto 30px auto;
 }
 .search_list{
     width: 1214px;
