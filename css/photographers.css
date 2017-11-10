@@ -66,7 +66,6 @@
     width: 100%;
     height: 100%;
 }
-
 .character_introduction p {
     font-family: PingFangSC-Regular;
     font-size: 14px;
@@ -76,8 +75,13 @@
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
-
 }
+
+.shared{
+    background: url("./../img/icon_share_y.png") no-repeat 25px center;
+    background-size: 20px 20px;
+}
+
 
 .character_introduction ul {
     height: 22px;

@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="../../css/common/footer.css">
 </head>
 <body>
-    <!-- <div class="footer">
-        <p>©2017 中国石油天然气集团公司 版权所有</p>
-        <p><b>技术支持：</b>中国石油信息技术服务中心</p>
-    </div> -->
-    <div style="height:110px;"></div>
-    <div class="footerWrapper">
+    <div class="common_footer_wrapper">
         <div class="footer">
             <p>©2017 中国石油天然气集团公司 版权所有</p>
             <p><b>技术支持：</b>中国石油信息技术服务中心</p>
         </div>
     </div>
+    <script>
+        var winHeight = $(window).height(),
+            docHeight = $(document).height(),
+            $footer = $('.common_footer_wrapper'),
+            footerOffsetTop = $footer.offset().top,
+            footerDis = winHeight-footerOffsetTop-$footer.height();
+        if(docHeight == winHeight){$footer.css('margin-top', footerDis+'px');};
+        footerDis == 0 ? $footer.css('margin-top', footerDis+40+'px') : $footer.css('margin-top', 60+'px');
+    </script>
 </body>
 </html>
