@@ -20,8 +20,11 @@
             $footer = $('.common_footer_wrapper'),
             footerOffsetTop = $footer.offset().top,
             footerDis = winHeight-footerOffsetTop-$footer.height();
-        if(docHeight == winHeight){$footer.css('margin-top', footerDis+'px');};
-        footerDis == 0 ? $footer.css('margin-top', footerDis+40+'px') : $footer.css('margin-top', 60+'px');
+        if(docHeight == winHeight){
+            footerDis == 0 ? $footer.css('margin-top', footerDis+40+'px') : $footer.css('margin-top', footerDis+'px');
+        }else{
+            $footer.css('margin-top', 60+'px');
+        }
     </script>
 </body>
 </html>
