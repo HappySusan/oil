@@ -197,6 +197,8 @@ operation:after{
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .friend_name{
     line-height: 60px;

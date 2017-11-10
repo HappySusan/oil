@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
+    <link rel="stylesheet" href="../../css/common/reset.css">
     <link rel="stylesheet" href="../../css/common/footer.css">
 </head>
 <body>
+    <div style="height: 1200px; width:100%; background:pink; margin:80px auto;"></div>
     <div class="common_footer_wrapper">
-        <div class="footer">
-            <p>©2017 中国石油天然气集团公司 版权所有</p>
-            <p><b>技术支持：</b>中国石油信息技术服务中心</p>
+        <div class="footer_con">
+            <div class="footer">
+                <p>©2017 中国石油天然气集团公司 版权所有</p>
+                <p><b>技术支持：</b>中国石油信息技术服务中心</p>
+            </div>
         </div>
     </div>
+    <script src="../../js/common/jquery.min.js"></script>
     <script>
         var winHeight = $(window).height(),
             docHeight = $(document).height(),
@@ -21,9 +26,9 @@
             footerOffsetTop = $footer.offset().top,
             footerDis = winHeight-footerOffsetTop-$footer.height();
         if(docHeight == winHeight){
-            footerDis == 0 ? $footer.css('margin-top', footerDis+40+'px') : $footer.css('margin-top', footerDis+'px');
+            footerDis == 0 ? $footer.css('padding-top', footerDis+40+'px') : $footer.css('padding-top', footerDis+'px');
         }else{
-            $footer.css('margin-top', 60+'px');
+            $footer.css('padding-top', 60+'px');
         }
     </script>
 </body>
