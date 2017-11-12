@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../uploadimg/jquery.Jcrop.min.css">
+    <script src="../uploadimg/jquery.js"></script>
+    <script src="../uploadimg/jquery.Jcrop.min.js"></script>
+</head>
+<body>
+    <img id="element_id" src="../../img/banner.png">
+    <script>
+        var jcropApi;
+        $('#element_id').Jcrop({
+            allowSelect: true,
+            baseClass: 'jcrop',
+            bgOpacity: 0.3,
+            bgFade: true,
+            aspectRatio: 1,
+            minSelect: [100,100],
+            onChange: function(){
+            },
+            onDblClick: function(){
+                // console.log(jcropApi.tellSelect())
+            },
+            onSelect: function(){
+                // jcropApi.disable()
+                console.log(jcropApi.tellSelect())
+            },
+            onRelease: function(){
+                // jcropApi.destroy();
+            }
+        }, function() {
+            jcropApi = this;
+        });
+    </script>
+</body>
+</html>

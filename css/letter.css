@@ -186,10 +186,12 @@
     color: #999999;
 }
 .chat{
-    margin: 15px 30px 30px 110px;
+    margin: 0px 30px 30px 110px;
 }
 .chat p{
     font-family: PingFangSC-Regular;
+    line-height: 40px; 
+    width: 920px;
     font-size: 14px;
     white-space:nowrap;
     overflow:hidden;

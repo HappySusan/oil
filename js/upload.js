@@ -29,6 +29,7 @@ var votedetailObj = {
         $("#change_works").on('change',function(){
             var file = $(this).val();
             file == ""? $("#filePath").text('未上传任何文件').css('color','#ccc') : $("#filePath").text(getFileName(file)).css('color','#000');
+            $("#filePath").attr('title',getFileName(file));
             function getFileName(o){
                 var pos=o.lastIndexOf("\\");
                 return o.substring(pos+1);  
