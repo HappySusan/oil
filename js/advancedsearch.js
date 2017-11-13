@@ -7,8 +7,11 @@ var advancedsearchObj = {
         $(".lis").on("click","span",function(){
             $(this).addClass("current").siblings("span").removeClass("current");
             var activeVal= $(this).html(),
-            ind=$(this).parents("li").index();
+                ind=$(this).parents("li").index();
             $("#screen_wrapper .search_item li").eq(ind).show().children("em").text(activeVal);
+            if(activeVal == "全部"){
+                $("#screen_wrapper .search_item li").eq(ind).hide();
+            };
             advancedsearchObj.searchWidthFn();
         });
         $("#screen_wrapper .search_item li").on("click","i",function(){
