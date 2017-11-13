@@ -1,16 +1,18 @@
 
+var jcropApi, boundx, boundy;
+                    
 var cutImgObj = {
-    init: function(formId, fileId, preWrapClass,previewId, radio){
+    init: function(formId, fileId, preWrapClass,previewId, radio, boxWidth, boxHeight){
         $('#'+fileId).change(function(){
             var oFile = $('#'+fileId)[0].files[0];
             var rFilter = /^(image\/jpeg|image\/png|image\/jpg|image\/bmp|image\/gif|image\/webp)$/i;//图片格式限JPEG、PNG、BMP、GIF、Webp
 
-            if (!rFilter.test(oFile.type)) {// check for file type
+            if (oFile.type && !rFilter.test(oFile.type)) {// check for file type
                 alert('选择的图片格式未符合要求')
                 return;
             };
             
-            if (oFile.size > 12000 * 1024) {// check for file size
+            if (oFile.size && oFile.size > 12000 * 1024) {// check for file size
                 alert('请上传小于12M的图片')
                 return;
             };
@@ -20,7 +22,6 @@ var cutImgObj = {
                 oImage.src = e.target.result;
                 oImage.onload = function(){
                     $('#'+formId).find("."+preWrapClass).fadeIn(500);
-                    var jcropApi;
                     $('#'+previewId).Jcrop({
                         allowSelect: true,
                         baseClass: 'jcrop',
@@ -28,8 +29,8 @@ var cutImgObj = {
                         bgFade: true,
                         aspectRatio: radio,
                         minSelect: [30,30],
-                        // boxWidth:850,
-                        boxHeight:400,
+                        boxWidth: boxWidth,
+                        boxHeight: boxHeight,
                         onChange: function(){
                         },
                         onDblClick: function(){
@@ -41,15 +42,15 @@ var cutImgObj = {
                             $('#'+formId).find('.preview_w').val(e.w);
                             $('#'+formId).find('.preview_h').val(e.h);
                         },
-                        onRelease: function(){
-                            cutImgObj.clearData(formId);
-                            oImage.src='';
-                            $('#'+formId).find("."+preWrapClass).fadeOut(500);
-                
-                        }
+                        onRelease: cutImgObj.clearData(formId)
                     }, function() {
                         jcropApi = this;
+                        var bounds = this.getBounds();
+                        boundx = bounds[0];
+                        boundy = bounds[1];
                     });
+                    jcropApi.setImage(e.target.result);
+                    
                 }
             }
             oReader.readAsDataURL(oFile);
@@ -73,6 +74,6 @@ var cutImgObj = {
         })
     }
 };
-cutImgObj.init('upload_iconform','image_file','step2','preview_header',1);
-cutImgObj.init('upload_bgform','bg_file', 'bg_mask', 'preview_bg',3);
+cutImgObj.init('upload_iconform','image_file','step2','preview_header',1,750,300);
+cutImgObj.init('upload_bgform','bg_file', 'bg_mask', 'preview_bg',3,'',400);
 cutImgObj.maskCloseFn();
