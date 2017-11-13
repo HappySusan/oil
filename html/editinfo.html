@@ -62,39 +62,27 @@
 </div>
 <div class="infor_container">
         <div class="every_infor headerPic_infor">
-                <h3>上传头像</h3>
-                <div class="head_pic">
-                        <p class="fl">选择头像</p>
-                        <div class="headerPic_form">
-                            <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php" onsubmit="return checkForm()">
-                            <!-- hidden crop params -->
-                            <input type="hidden" id="x1" name="x1"autocomplete="off" />
-                            <input type="hidden" id="y1" name="y1" autocomplete="off"/>
-                            <input type="hidden" id="x2" name="x2"autocomplete="off" />
-                            <input type="hidden" id="y2" name="y2"autocomplete="off" />
-                            <label class="head_img fl" for="image_file"><img src="./../img/banner.png" alt=""></label> 
-                            <input type="file" name="image_file" id="image_file" class="none" onchange="fileSelectHandler()" />
-                            <div class="step2 none">
-                                <img id="preview" />
-                                <div class="info none">
-                                    <ul>
-                                        <li><label>文件大小</label> <input type="text" id="filesize" name="filesize" class="input" autocomplete="off" /></li>
-                                        <li><label>类型</label> <input type="text" id="filetype" name="filetype" class="input"autocomplete="off"/></li>
-                                        <li><label>图像尺寸</label> <input type="text" id="filedim" name="filedim" class="input"autocomplete="off"/></li>
-                                        <li><label>宽度</label> <input type="text" id="w" name="w" class="input"autocomplete="off"/></li>
-                                        <li><label>高度</label> <input type="text" id="h" name="h" class="input"autocomplete="off"/></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="prompt_btn">
-                                <div class="error">注意：上传前，先截图</div>
-                                <input type="submit" value="上传" class="btn" />
-                            </div>
-                        </form>
+            <h3>上传头像</h3>
+            <div class="head_pic">
+                <p class="fl">选择头像</p>
+                <div class="headerPic_form">
+                    <form enctype="multipart/form-data" method="post" action="upload.php" onsubmit="return cutImgObj.checkForm('upload_iconform')" id="upload_iconform">
+                        <label class="head_img fl" for="image_file"><img src="./../img/banner.png" alt=""></label> 
+                        <input type="file" name="image_file" id="image_file" class="none" />
+                        <input type="hidden" class="left_x" name="left_x"autocomplete="off" />
+                        <input type="hidden" class="left_y" name="left_y" autocomplete="off"/>
+                        <input type="hidden" class="preview_w" name="w"autocomplete="off" />
+                        <input type="hidden" class="preview_h" name="h"autocomplete="off" />
+                        <div class="step2">
+                            <img id="preview_header"/>
                         </div>
-                    
-                    </div>
+                        <div class="prompt_btn">
+                            <input type="submit" value="上传" class="btn" />
+                        </div>
+                    </form>
+                </div>
             </div>
+        </div>
     <div class="every_infor basic_infor">
         <h3>基本信息</h3>
         
@@ -120,11 +108,27 @@
         <h3>更换背景图</h3>
         <div class="second_tit choice_bg">
             <p>选择背景图</p>
-            <div class="bg_img fl"><img src="./../img/banner.png" alt=""></div>
-            <label for="change_bg">选择图片</label>
-            <input type="file" id="change_bg" class="none"> 
+            <div class="bgPic_form">
+                <form enctype="multipart/form-data" method="post" action="upload.php" onsubmit="return cutImgObj.checkForm('upload_bgform')" id="upload_bgform">
+                    <label class="bg_img fl" for="bg_file"><img src="./../img/banner.png" alt=""></label> 
+                    <input type="file" name="bg_file" id="bg_file" class="none" />
+                    <input type="hidden" class="left_x" name="left_x"autocomplete="off" />
+                    <input type="hidden" class="left_y" name="left_y" autocomplete="off"/>
+                    <input type="hidden" class="preview_w" name="w"autocomplete="off" />
+                    <input type="hidden" class="preview_h" name="h"autocomplete="off" />
+                    <div class="bg_mask" id="bg_mask">
+                        <img id="preview_bg"/>
+                        <div class="bg_close" id="bg_close">×</div>
+                        <div class="bg_btn">
+                            <input type="submit" value="上传" class="btn" />
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
         </div>
     </div>
+
     <div class="every_infor photographers_infor">
         <h3>摄影师信息</h3>
         <div class="second_tit photographers_introduce">
@@ -157,8 +161,8 @@
 </div>
 <script src="./../js/common/jquery.min.js"></script>
 <script src="./../lib/uploadimg/jquery.Jcrop.min.js"></script>
-<script src="./../lib/uploadimg/script.js"></script>
-<script src="./../js/editinfo.js"></script>
+<!-- <script src="./../lib/uploadimg/script.js"></script> -->
+<script src="./../js/cutimg.js"></script>
 
 <body>
 

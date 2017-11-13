@@ -1,8 +1,8 @@
 
 var cutImgObj = {
-    init: function(){
-        $('#image_file').change(function(){
-            var oFile = $('#image_file')[0].files[0];
+    init: function(formId, fileId, preWrapClass,previewId, radio){
+        $('#'+fileId).change(function(){
+            var oFile = $('#'+fileId)[0].files[0];
             var rFilter = /^(image\/jpeg|image\/png|image\/jpg|image\/bmp|image\/gif|image\/webp)$/i;//图片格式限JPEG、PNG、BMP、GIF、Webp
 
             if (!rFilter.test(oFile.type)) {// check for file type
@@ -10,33 +10,43 @@ var cutImgObj = {
                 return;
             };
             
-            if (oFile.size > 1000 * 1024) {// check for file size
+            if (oFile.size > 12000 * 1024) {// check for file size
                 alert('请上传小于12M的图片')
                 return;
             };
-            var oImage = document.getElementById("preview_header");//img preview
+            var oImage = document.getElementById(previewId);//img preview
             var oReader = new FileReader();
             oReader.onload= function(e){
                 oImage.src = e.target.result;
                 oImage.onload = function(){
-                    $(".step2").fadeIn(500);
+                    $('#'+formId).find("."+preWrapClass).fadeIn(500);
                     var jcropApi;
-                    $('#preview_header').Jcrop({
+                    $('#'+previewId).Jcrop({
                         allowSelect: true,
                         baseClass: 'jcrop',
                         bgOpacity: 0.3,
                         bgFade: true,
-                        aspectRatio: 1,
-                        minSelect: [100,100],
-                        boxWidth:750,
-                        boxHeight:300,
+                        aspectRatio: radio,
+                        minSelect: [30,30],
+                        // boxWidth:850,
+                        boxHeight:400,
                         onChange: function(){
                         },
                         onDblClick: function(){
-                            // console.log(jcropApi.tellSelect())
+                            $('#'+formId).submit();// console.log(jcropApi.tellSelect())
                         },
-                        onSelect: cutImgObj.selectedData,
-                        onRelease: cutImgObj.clearData
+                        onSelect: function(e){
+                            $('#'+formId).find('.left_x').val(e.x);
+                            $('#'+formId).find('.left_y').val(e.y);
+                            $('#'+formId).find('.preview_w').val(e.w);
+                            $('#'+formId).find('.preview_h').val(e.h);
+                        },
+                        onRelease: function(){
+                            cutImgObj.clearData(formId);
+                            oImage.src='';
+                            $('#'+formId).find("."+preWrapClass).fadeOut(500);
+                
+                        }
                     }, function() {
                         jcropApi = this;
                     });
@@ -45,23 +55,24 @@ var cutImgObj = {
             oReader.readAsDataURL(oFile);
         });
     },
-    selectedData: function(e){
-        $('.left_x').val(e.x);
-        $('.left_y').val(e.y);
-        $('.preview_w').val(e.w);
-        $('.preview_h').val(e.h);
+    clearData: function(formId){
+        $('#'+formId).find('.left_x').val('');
+        $('#'+formId).find('.left_y').val('');
+        $('#'+formId).find('.preview_w').val('');
+        $('#'+formId).find('.preview_h').val('');
     },
-    clearData(){
-        $('.left_x').val('');
-        $('.left_y').val('');
-        $('.preview_w').val('');
-        $('.preview_h').val('');
-    },
-    checkForm: function() {
-        if (parseInt($('.preview_w').val()))
+    checkForm: function(formId) {
+        if (parseInt($('#'+formId).find('.preview_w').val()))
             return true;
         alert('请先选择图片，并且截图');
         return false;
+    },
+    maskCloseFn(){
+        $("#bg_close").click(function(){
+            $("#bg_mask").hide();
+        })
     }
 };
-cutImgObj.init();
+cutImgObj.init('upload_iconform','image_file','step2','preview_header',1);
+cutImgObj.init('upload_bgform','bg_file', 'bg_mask', 'preview_bg',3);
+cutImgObj.maskCloseFn();
