@@ -6,7 +6,7 @@ var advancedsearchObj = {
         this.sendEmailFn();
         this.shareFn();
         this.downloadFn();
-         
+        this.commentFn();
     },
     shareFn:function(){
         var $share_btn=$("#share_btn");
@@ -67,6 +67,20 @@ var advancedsearchObj = {
     sendEmailFn:function(){
         $(".send_email").on("click",function(){
             common.sendEmailDialog($("#friend_name a").html())
+        });
+    },
+    commentFn: function(){
+        $('#commentCon').on('keyup', function(){
+            var reg = /[\u4e00-\u9fa5]/g,
+                val = $(this).val(),
+                $real = $('.real_words');
+            var len = val.length;
+            if(val.match(reg)){
+                var chinaLetterLen = val.match(reg).length;
+                len = len+chinaLetterLen;
+            }
+            $real.text(len);
+            len>100? $real.css('color', 'red') : $real.css('color', '#ccc');
         });
     }
 
