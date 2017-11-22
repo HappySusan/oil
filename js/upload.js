@@ -42,22 +42,22 @@ var votedetailObj = {
                 dataId=$(this).data("id"),
                 str="",
                 flag=0,
-                len=$("#selected_tag li").length;
+                len=$("#selected_tag li").length + $("#selected_tag_input li").length;
                 str="<li data-id="+dataId+">"+vals+"<span>×</span></li>";
             if (len!=0) {
                 if (len>=10) {
                     alert("最多选择10个标签");
                     return false;
                 }
+                flag=1;
                 $.each($("#selected_tag li"),function(i,v){
                     if ($(v).attr("data-id")==dataId) {
                         alert("您已选择此标签！");
                         flag=0;
                         return false;
-                    }else if ($(v).attr("data-id")!=dataId) {
-                        flag=1;
                     }
                 });
+                
                 if (flag) {
                     $("#selected_tag").append($(str));
                 }
@@ -67,7 +67,7 @@ var votedetailObj = {
         });
     },
     delCheckedTagFn: function(){
-        $("#selected_tag").on("click","span",function(){
+        $("#selected_tag,#selected_tag_input").on("click","span",function(){
             var ele=$(this).parents("li");
             ele.remove();
         });
@@ -76,30 +76,37 @@ var votedetailObj = {
         $("#custom_tag").keypress(function(event){
             if(event.which == 32) {
                 var str="",
-                    len=$("#selected_tag li").length,
-                    new_tag_val=$("#custom_tag").val();
+                    inputStr="",
+                    len=$("#selected_tag li").length + $("#selected_tag_input li").length,
+                    new_tag_val=$.trim($("#custom_tag").val()),
+                    canCreate = false;
                     
                 if (new_tag_val=="") {
                     alert("请输入正确标签内容！")
-                }else if (new_tag_val!="") {
-                    if (len>=10) {
-                        alert("最多选择10个标签");
-                        return false;
-                    }else{
-                        common.ajaxFn("url","GET",{"val":new_tag_val},function(res){//走一个接口，然后返回ID，放进新创建的标签里面data-id这里
-                            //返回数据格式{
-                            //     status:200,
-                            //     id:1
-                            // }
-                            if (res.status==200) {
-                                str="<li data-id="+res.id+">"+new_tag_val+"<span>×</span></li>";
-                                $("#selected_tag").append($(str));
-                                $("#custom_tag").val("")
-                            }
-                        }); 
-                        
+                    return false;
+                };
+                if (len>=10) {
+                    alert("最多选择10个标签");
+                    $("#custom_tag").val("")
+                    return false;
+                };
+                canCreate = true;
+                $.each($("#selected_tag_input li i"),function(i,v){
+                    console.log($(v).text())
+                    console.log(new_tag_val)
+                    if ($(v).html()== new_tag_val) {
+                        alert("您已创建此标签！");
+                        canCreate = false;
                     }
+                });
+                console.log(canCreate)
+                inputStr="<li><i>"+new_tag_val+"</i><span>×</span></li>";
+                if(canCreate){
+                    console.log(11231)
+                    $("#selected_tag_input").append($(inputStr));
+                    $("#custom_tag").val("");
                 }
+            
                  
             }
         });
